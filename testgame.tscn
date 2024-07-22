@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=3 uid="uid://djlvbcsqvnxlw"]
+[gd_scene load_steps=6 format=3 uid="uid://djlvbcsqvnxlw"]
 
 [ext_resource type="Script" path="res://testgame.gd" id="1_aisom"]
 [ext_resource type="PackedScene" uid="uid://c5ldhpn6hxvjo" path="res://playertest.tscn" id="1_s0lxf"]
 [ext_resource type="PackedScene" uid="uid://bgyuj6ykvf7r5" path="res://characters/treetest.tscn" id="2_ks5bi"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="4_jecwf"]
 
 [sub_resource type="Curve2D" id="Curve2D_0t50q"]
 _data = {
@@ -27,7 +28,7 @@ color = Color(0.297433, 0.475763, 0.214713, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." instance=ExtResource("1_s0lxf")]
-position = Vector2(635, 423)
+position = Vector2(771, 497)
 platform_floor_layers = 4294967288
 
 [node name="Path2D" type="Path2D" parent="Player"]
@@ -92,6 +93,14 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_font_sizes/font_size = 155
 text = "Game Over"
+
+[node name="CanvasLayer2" type="CanvasLayer" parent="."]
+
+[node name="Virtual Joystick" parent="CanvasLayer2" instance=ExtResource("4_jecwf")]
+offset_left = 3.0
+offset_top = -318.0
+offset_right = 303.0
+offset_bottom = -18.0
 
 [connection signal="health_gone" from="Player" to="." method="_on_player_health_gone"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

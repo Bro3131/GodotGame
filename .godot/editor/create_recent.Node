@@ -1,8 +1,10 @@
+CanvasLayer
+Button
+Sprite2D
 Node2D
 TouchScreenButton
 Label
 ColorRect
-CanvasLayer
 Timer
 PathFollow2D
 Path2D
@@ -10,6 +12,3 @@ ProgressBar
 CollisionShape2D
 Area2D
 Marker2D
-Camera2D
-CharacterBody2D
-StaticBody2D
