@@ -1,0 +1,97 @@
+[gd_scene load_steps=5 format=3 uid="uid://djlvbcsqvnxlw"]
+
+[ext_resource type="Script" path="res://testgame.gd" id="1_aisom"]
+[ext_resource type="PackedScene" uid="uid://c5ldhpn6hxvjo" path="res://playertest.tscn" id="1_s0lxf"]
+[ext_resource type="PackedScene" uid="uid://bgyuj6ykvf7r5" path="res://characters/treetest.tscn" id="2_ks5bi"]
+
+[sub_resource type="Curve2D" id="Curve2D_0t50q"]
+_data = {
+"points": PackedVector2Array(0, 0, 0, 0, -230.29, -169.084, 0, 0, 0, 0, 1664, -191, 0, 0, 0, 0, 1665.37, 1099.04, 0, 0, 0, 0, -245, 1110, 0, 0, 0, 0, -231, -168, 0, 0, 0, 0, -232, -167)
+}
+point_count = 6
+
+[node name="game" type="Node2D"]
+y_sort_enabled = true
+script = ExtResource("1_aisom")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -33
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.0463023
+anchor_bottom = 0.0191919
+offset_right = 1481.0
+offset_bottom = 976.0
+color = Color(0.297433, 0.475763, 0.214713, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="Player" parent="." instance=ExtResource("1_s0lxf")]
+position = Vector2(635, 423)
+platform_floor_layers = 4294967288
+
+[node name="Path2D" type="Path2D" parent="Player"]
+position = Vector2(-644.174, -427.266)
+scale = Vector2(1.0197, 1.00384)
+curve = SubResource("Curve2D_0t50q")
+
+[node name="PathFollow2D" type="PathFollow2D" parent="Player/Path2D"]
+unique_name_in_owner = true
+position = Vector2(-230.29, -169.084)
+rotation = -0.011569
+
+[node name="treetest" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(252, 251)
+
+[node name="treetest2" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(642, 572)
+
+[node name="treetest3" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(1334, 230)
+
+[node name="treetest4" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(1412, 280)
+
+[node name="treetest5" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(1306, 313)
+
+[node name="treetest6" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(819, 198)
+
+[node name="treetest7" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(1133, 834)
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.3
+autostart = true
+
+[node name="GameOver" type="CanvasLayer" parent="."]
+unique_name_in_owner = true
+visible = false
+
+[node name="ColorRect" type="ColorRect" parent="GameOver"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.533333)
+
+[node name="Label" type="Label" parent="GameOver/ColorRect"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -43.5
+offset_top = -11.5
+offset_right = 43.5
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_font_sizes/font_size = 155
+text = "Game Over"
+
+[connection signal="health_gone" from="Player" to="." method="_on_player_health_gone"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
