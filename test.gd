@@ -8,7 +8,6 @@ var health = 100.0
 @export var speed : float = 600
 
 @export var joystick_left : VirtualJoystick
-
 @export var joystick_right : VirtualJoystick
 
 var move_vector := Vector2.ZERO
