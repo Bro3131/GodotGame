@@ -32,4 +32,5 @@ func _on_timer_timeout():
 
 func _on_player_health_gone():
 	end_game_screen.visible = true
+	get_tree().paused = true
 

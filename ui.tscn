@@ -6,6 +6,7 @@
 [sub_resource type="ImageTexture" id="ImageTexture_8q8mj"]
 
 [node name="Node" type="Node"]
+process_mode = 3
 
 [node name="background" type="TextureRect" parent="."]
 anchors_preset = 15
@@ -166,6 +167,15 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource("2_ssdjn")
 metadata/_edit_use_anchors_ = true
+
+[node name="background" type="TextureRect" parent="ui/EndGameScreen"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = SubResource("ImageTexture_8q8mj")
 
 [node name="CenterContainer" type="CenterContainer" parent="ui/EndGameScreen"]
 layout_mode = 1

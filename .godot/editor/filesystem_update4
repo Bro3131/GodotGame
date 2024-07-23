@@ -1,12 +1,9 @@
-res://testgame.tscn
-res://mobtest.tscn
 res://playertest.tscn
+res://animated_sprite_hpd.tscn
+res://testgame.tscn
+res://mobtest.gd
+res://mobtest.tscn
 res://testgun.tscn
 res://virtual_joystick.tscn
 res://addons/virtual_joystick/test/test.tscn
-res://main_menu.tscn
-res://ui.gd
-res://testgame.gd
-res://mobtest.gd
 res://ui.tscn
-res://test.gd

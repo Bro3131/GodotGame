@@ -1,8 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://cxls4w456ry47"]
-
-[ext_resource type="SpriteFrames" uid="uid://bu5w4r4rno1ae" path="res://hp_animated.tres" id="1_w08tl"]
+[gd_scene format=3 uid="uid://cxls4w456ry47"]
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D"]
-sprite_frames = ExtResource("1_w08tl")
 frame_progress = 0.393728
 speed_scale = 2.0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]

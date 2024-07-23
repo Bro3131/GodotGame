@@ -1,7 +1,7 @@
 [gd_scene load_steps=9 format=3 uid="uid://c5ldhpn6hxvjo"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_knle0"]
-[ext_resource type="Script" path="res://test.gd" id="1_w324g"]
+[ext_resource type="Script" path="res://playertest.gd" id="1_w324g"]
 [ext_resource type="PackedScene" uid="uid://bgs35bewh5xui" path="res://testgun.tscn" id="3_ko0p8"]
 [ext_resource type="Texture2D" uid="uid://dc134qsbse8m7" path="res://Спрайт-0002.png" id="4_a4n33"]
 
