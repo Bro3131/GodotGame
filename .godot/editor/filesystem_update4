@@ -1,4 +1,9 @@
+res://Sword/sword.tscn
+res://Sword/MyHitBox.gd
 res://testgame.tscn
 res://mobtest.tscn
 res://playertest.tscn
+res://characters/happy_boo/happy_boo.tscn
 res://testgun.tscn
+res://Sword/sword_test.tscn
+res://characters/slime/slime.tscn

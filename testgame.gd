@@ -1,5 +1,23 @@
 extends Node2D
 
+@onready var ui_scene_packed = preload("res://ui.tscn")
+@onready var end_game_screen
+@onready var main_menu
+@onready var settings_menu
+
+
+func _ready():
+	var ui_scene = ui_scene_packed.instantiate()
+	add_child(ui_scene)
+	var ui_node = ui_scene.get_node("ui")
+	end_game_screen = ui_node.get_node("EndGameScreen")
+	end_game_screen.visible = false
+	main_menu = ui_node.get_node("MainMenu")
+	main_menu.visible = false
+	settings_menu = ui_node.get_node("SettingsMenu")
+	settings_menu.visible = false
+	get_tree().paused = false
+
 
 func spawn_mob():
 	var new_mob = preload("res://mobtest.tscn").instantiate()
@@ -13,5 +31,6 @@ func _on_timer_timeout():
 
 
 func _on_player_health_gone():
-	%GameOver.visible = true
+	end_game_screen.visible = true
 	get_tree().paused = true
+

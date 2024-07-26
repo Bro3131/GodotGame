@@ -1,8 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://c5ldhpn6hxvjo"]
+[gd_scene load_steps=10 format=3 uid="uid://c5ldhpn6hxvjo"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_knle0"]
-[ext_resource type="Script" path="res://test.gd" id="1_w324g"]
+[ext_resource type="Script" path="res://playertest.gd" id="1_w324g"]
 [ext_resource type="PackedScene" uid="uid://bgs35bewh5xui" path="res://testgun.tscn" id="3_ko0p8"]
+[ext_resource type="Texture2D" uid="uid://dc134qsbse8m7" path="res://Спрайт-0002.png" id="4_a4n33"]
+[ext_resource type="PackedScene" uid="uid://bnfrvrp11fd8f" path="res://Sword/sword.tscn" id="5_6o3id"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hb50k"]
 radius = 30.0
@@ -36,6 +38,7 @@ shape = SubResource("CircleShape2D_hb50k")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="testgun" parent="." instance=ExtResource("3_ko0p8")]
+process_mode = 4
 position = Vector2(-1, -38)
 
 [node name="HurtBox" type="Area2D" parent="."]
@@ -49,11 +52,17 @@ debug_color = Color(0.927448, 2.40654e-06, 0.506634, 0.42)
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
-offset_left = -229.0
-offset_top = -254.0
-offset_right = 228.0
-offset_bottom = -218.0
+offset_left = -730.0
+offset_top = -458.0
+offset_right = -477.0
+offset_bottom = -433.0
 theme_override_styles/background = SubResource("StyleBoxFlat_5quhl")
 theme_override_styles/fill = SubResource("StyleBoxFlat_nw82f")
 value = 100.0
 show_percentage = false
+
+[node name="Sprite2D" type="Sprite2D" parent="ProgressBar"]
+position = Vector2(116, 58)
+texture = ExtResource("4_a4n33")
+
+[node name="Sword" parent="." instance=ExtResource("5_6o3id")]

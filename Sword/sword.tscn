@@ -1,0 +1,86 @@
+[gd_scene load_steps=8 format=3 uid="uid://bnfrvrp11fd8f"]
+
+[ext_resource type="Script" path="res://Sword/sword_animation.gd" id="1_1f30k"]
+[ext_resource type="Texture2D" uid="uid://dnv5o2xot854" path="res://Sword/katana_test.png" id="1_n88ts"]
+[ext_resource type="Script" path="res://Sword/MyHitBox.gd" id="2_4ij8g"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qlfy3"]
+radius = 52.6616
+height = 746.973
+
+[sub_resource type="Animation" id="Animation_wuuys"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KatanaTest/MyHitBox/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_xta15"]
+resource_name = "katana_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KatanaTest/MyHitBox/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("KatanaTest:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.00319186, 0.565816, 0.920544, 0.104184]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tdip7"]
+_data = {
+"RESET": SubResource("Animation_wuuys"),
+"hit": SubResource("Animation_xta15")
+}
+
+[node name="Sword" type="Node2D"]
+script = ExtResource("1_1f30k")
+
+[node name="KatanaTest" type="Sprite2D" parent="."]
+position = Vector2(130, -94)
+rotation = -0.00319186
+scale = Vector2(0.123943, 0.132703)
+texture = ExtResource("1_n88ts")
+
+[node name="MyHitBox" type="Area2D" parent="KatanaTest"]
+rotation = 0.100337
+scale = Vector2(0.999266, 1.00084)
+skew = 0.0145636
+script = ExtResource("2_4ij8g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="KatanaTest/MyHitBox"]
+position = Vector2(231.275, -370.828)
+rotation = -2.42569
+scale = Vector2(3.82943, -2.60045)
+skew = 0.060941
+shape = SubResource("CapsuleShape2D_qlfy3")
+
+[node name="Huy" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_tdip7")
+}
+speed_scale = 1.042

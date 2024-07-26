@@ -1,0 +1,71 @@
+[gd_scene load_steps=8 format=3 uid="uid://b0bdqq1bpwncb"]
+
+[ext_resource type="Texture2D" path="res://sword/1669927059_kartinkin-net-p-nezeritovii-mech-tekstura-oboi-64.png" id="1_hlofp"]
+[ext_resource type="Script" path="res://Sword/sword.gd" id="1_xefrb"]
+[ext_resource type="Script" path="res://sword/HitBox.gd" id="2_0ofel"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_3w1ii"]
+radius = 663.666
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_5vets"]
+radius = 49.4667
+height = 407.106
+
+[sub_resource type="Animation" id="Animation_sk7xx"]
+resource_name = "slash"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/Marker2D/Sprite2D:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.9),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [0.0, 0.349066, 1.39626]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_605dk"]
+_data = {
+"slash": SubResource("Animation_sk7xx")
+}
+
+[node name="Swordtest" type="Node2D"]
+
+[node name="Area2D" type="Area2D" parent="."]
+visible = false
+position = Vector2(-3, 3)
+collision_layer = 7
+collision_mask = 7
+script = ExtResource("1_xefrb")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(17, -40)
+shape = SubResource("CircleShape2D_3w1ii")
+
+[node name="Marker2D" type="Marker2D" parent="Area2D"]
+position = Vector2(0, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="Area2D/Marker2D"]
+position = Vector2(234, -246)
+scale = Vector2(0.2185, 0.2185)
+texture = ExtResource("1_hlofp")
+
+[node name="HitBox" type="Area2D" parent="Area2D/Marker2D/Sprite2D"]
+script = ExtResource("2_0ofel")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D/Marker2D/Sprite2D/HitBox"]
+position = Vector2(201.373, -292.906)
+rotation = -2.35956
+scale = Vector2(4.57666, 4.57666)
+shape = SubResource("CapsuleShape2D_5vets")
+
+[node name="Timer" type="Timer" parent="Area2D"]
+wait_time = 0.5
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+unique_name_in_owner = true
+libraries = {
+"": SubResource("AnimationLibrary_605dk")
+}
