@@ -1,10 +1,12 @@
-[gd_scene load_steps=10 format=3 uid="uid://c5ldhpn6hxvjo"]
+[gd_scene load_steps=14 format=3 uid="uid://c5ldhpn6hxvjo"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_knle0"]
 [ext_resource type="Script" path="res://playertest.gd" id="1_w324g"]
 [ext_resource type="PackedScene" uid="uid://bgs35bewh5xui" path="res://testgun.tscn" id="3_ko0p8"]
 [ext_resource type="Texture2D" uid="uid://dc134qsbse8m7" path="res://Спрайт-0002.png" id="4_a4n33"]
 [ext_resource type="PackedScene" uid="uid://bnfrvrp11fd8f" path="res://Sword/sword.tscn" id="5_6o3id"]
+[ext_resource type="Texture2D" uid="uid://bp8g23pgap60a" path="res://Textures/Gui/exp_background.png" id="5_6wle4"]
+[ext_resource type="Texture2D" uid="uid://b5ljsjaq31qr6" path="res://Textures/Gui/exp_progress.png" id="5_y27g4"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hb50k"]
 radius = 30.0
@@ -26,7 +28,14 @@ corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
 
-[node name="Player" type="CharacterBody2D"]
+[sub_resource type="CircleShape2D" id="CircleShape2D_wria4"]
+radius = 200.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2psl8"]
+radius = 20.0
+
+[node name="Player" type="CharacterBody2D" groups=["player"]]
+collision_mask = 9
 platform_floor_layers = 0
 script = ExtResource("1_w324g")
 
@@ -38,7 +47,6 @@ shape = SubResource("CircleShape2D_hb50k")
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="testgun" parent="." instance=ExtResource("3_ko0p8")]
-process_mode = 4
 position = Vector2(-1, -38)
 
 [node name="HurtBox" type="Area2D" parent="."]
@@ -66,3 +74,56 @@ position = Vector2(116, 58)
 texture = ExtResource("4_a4n33")
 
 [node name="Sword" parent="." instance=ExtResource("5_6o3id")]
+process_mode = 4
+visible = false
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="ExpBar" type="TextureProgressBar" parent="CanvasLayer/Control"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 1.0
+grow_horizontal = 2
+texture_under = ExtResource("5_6wle4")
+texture_progress = ExtResource("5_y27g4")
+
+[node name="Level_label" type="Label" parent="CanvasLayer/Control/ExpBar"]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -95.0
+offset_top = -11.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 16
+text = "Level: 1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GrabArea" type="Area2D" parent="."]
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
+shape = SubResource("CircleShape2D_wria4")
+
+[node name="CollectArea" type="Area2D" parent="."]
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea"]
+shape = SubResource("CircleShape2D_2psl8")
+
+[connection signal="area_entered" from="GrabArea" to="." method="_on_grab_area_area_entered"]
+[connection signal="area_entered" from="CollectArea" to="." method="_on_collect_area_area_entered"]

@@ -6,6 +6,8 @@ var health = 3
 
 func _ready():
 	%Slime.play_walk()
+	
+
 
 func _physics_process(delta):
 	var direction = global_position.direction_to(player.global_position)
@@ -18,6 +20,9 @@ func take_damage():
 	%Slime.play_hurt()
 	
 	if health == 0:
+		var gem = preload("res://experience.tscn").instantiate()
+		gem.position = position  # Создайте гем на месте смерти врага
+		get_parent().call_deferred("add_child",gem)
 		queue_free()
 		const SMOKE_SCENE = preload("res://smoke_explosion/smoke_explosion.tscn")
 		var smoke = SMOKE_SCENE.instantiate()

@@ -79,6 +79,10 @@ run/main_scene="res://ui.tscn"
 config/features=PackedStringArray("4.2", "Forward Plus")
 config/icon="res://icon.png"
 
+[autoload]
+
+Ui="*res://ui.gd"
+
 [display]
 
 window/size/viewport_width=1920
@@ -124,7 +128,10 @@ pointing/emulate_touch_from_mouse=true
 
 [layer_names]
 
+2d_physics/layer_1="Player"
+2d_physics/layer_2="enemies"
 3d_physics/layer_2="player"
+2d_physics/layer_4="loot"
 
 [rendering]
 

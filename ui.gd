@@ -6,10 +6,6 @@ extends CanvasLayer
 @onready var end_game_screen = $EndGameScreen
 
 func _ready():
-	end_game_screen.visible = false 
-	main_menu.visible = true
-	settings_menu.visible = false
-	get_tree().paused = false
 	pass
 
 #main Menu

@@ -61,14 +61,17 @@ script = ExtResource("1_1f30k")
 
 [node name="KatanaTest" type="Sprite2D" parent="."]
 position = Vector2(130, -94)
-rotation = -0.00319186
-scale = Vector2(0.123943, 0.132703)
+rotation = 0.100767
+scale = Vector2(0.123852, 0.132812)
+skew = -0.0131663
 texture = ExtResource("1_n88ts")
 
 [node name="MyHitBox" type="Area2D" parent="KatanaTest"]
-rotation = 0.100337
-scale = Vector2(0.999266, 1.00084)
-skew = 0.0145636
+rotation = 0.00318732
+scale = Vector2(1.00069, 0.999419)
+skew = 0.0145934
+collision_layer = 2
+collision_mask = 0
 script = ExtResource("2_4ij8g")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="KatanaTest/MyHitBox"]
@@ -84,3 +87,6 @@ libraries = {
 "": SubResource("AnimationLibrary_tdip7")
 }
 speed_scale = 1.042
+
+[connection signal="area_entered" from="KatanaTest/MyHitBox" to="." method="_on_my_hit_box_area_entered"]
+[connection signal="area_entered" from="KatanaTest/MyHitBox" to="KatanaTest/MyHitBox" method="_on_area_entered"]
