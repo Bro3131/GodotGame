@@ -20,6 +20,7 @@ var move_vector := Vector2.ZERO
 
 func _ready():
 	add_to_group("player")
+	set_physics_process(true)
 
 func _process(delta: float) -> void:
 	## Movement using the joystick output:
@@ -65,19 +66,34 @@ func add_experience(amount: int):
 	experience += amount
 	check_level_up()
 	set_expbar(experience)
-	
+
+@onready var experience_to_next_level = 100
+
 func check_level_up():
-	# Здесь можно настроить систему уровневого роста
-	# Например, для каждого уровня требуется больше опыта
-	var experience_to_next_level = level * 100
 	if experience >= experience_to_next_level:
 		level += 1
-		experience -= experience_to_next_level
-		set_expbar(experience, experience_to_next_level)
+		experience = 0
+		experience_to_next_level = 100 * pow(level, 1.5)
+		set_expbarmax(experience, experience_to_next_level)
 		level_label.text = str("Level: ",level)
-		# Дополнительно: добавьте улучшения для игрока при повышении уровня
+		# Дополнительно: добавьте у	лучшения для игрока при повышении уровня
 
-func set_expbar(set_value = 1, set_max_value = 100):
+
+#func calculate_experiencecap():
+	#var exp_cap = level
+	#if level < 20:
+		#exp_cap = level*5
+	#elif level < 40:
+		#exp_cap + 95 * (level-19)*8
+	#else:
+		#exp_cap = 255 + (level-39)*12
+	#return exp_cap
+
+func set_expbar(exp):
+	exp_bar.value = exp
+
+
+func set_expbarmax(set_value, set_max_value):
 	exp_bar.value = set_value
 	exp_bar.max_value = set_max_value
 

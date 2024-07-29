@@ -1,19 +1,14 @@
-[gd_scene load_steps=7 format=3 uid="uid://djlvbcsqvnxlw"]
+[gd_scene load_steps=5 format=3 uid="uid://djlvbcsqvnxlw"]
 
 [ext_resource type="Script" path="res://testgame.gd" id="1_aisom"]
 [ext_resource type="PackedScene" uid="uid://c5ldhpn6hxvjo" path="res://playertest.tscn" id="1_s0lxf"]
 [ext_resource type="PackedScene" uid="uid://bgyuj6ykvf7r5" path="res://characters/treetest.tscn" id="2_ks5bi"]
-[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="4_jecwf"]
 
 [sub_resource type="Curve2D" id="Curve2D_0t50q"]
 _data = {
 "points": PackedVector2Array(0, 0, 0, 0, -230.29, -169.084, 0, 0, 0, 0, 1664, -191, 0, 0, 0, 0, 1665.37, 1099.04, 0, 0, 0, 0, -245, 1110, 0, 0, 0, 0, -231, -168, 0, 0, 0, 0, -232, -167)
 }
 point_count = 6
-
-[sub_resource type="GDScript" id="GDScript_jxh0p"]
-script/source = "extends CanvasLayer
-"
 
 [node name="game" type="Node2D"]
 y_sort_enabled = true
@@ -69,15 +64,6 @@ position = Vector2(1133, 834)
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
-
-[node name="CanvasLayer2" type="CanvasLayer" parent="."]
-script = SubResource("GDScript_jxh0p")
-
-[node name="Virtual Joystick" parent="CanvasLayer2" instance=ExtResource("4_jecwf")]
-offset_left = 3.0
-offset_top = -318.0
-offset_right = 303.0
-offset_bottom = -18.0
 
 [connection signal="health_gone" from="Player" to="." method="_on_player_health_gone"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

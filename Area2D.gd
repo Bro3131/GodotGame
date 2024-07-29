@@ -4,7 +4,7 @@ extends Area2D
 var target = null
 var speed = -3
 # Установите количество опыта, который этот гем добавляет игроку
-@export var experience = 50
+@export var experience = 10
 @onready var collision_shape_2d = $CollisionShape2D
 @onready var sprite_2d = $Sprite2D
 
