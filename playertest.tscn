@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c5ldhpn6hxvjo"]
+[gd_scene load_steps=23 format=3 uid="uid://c5ldhpn6hxvjo"]
 
 [ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_knle0"]
 [ext_resource type="Script" path="res://playertest.gd" id="1_w324g"]
@@ -6,8 +6,15 @@
 [ext_resource type="Texture2D" uid="uid://dc134qsbse8m7" path="res://Спрайт-0002.png" id="4_a4n33"]
 [ext_resource type="PackedScene" uid="uid://bnfrvrp11fd8f" path="res://Sword/sword.tscn" id="5_6o3id"]
 [ext_resource type="Texture2D" uid="uid://bp8g23pgap60a" path="res://Textures/Gui/exp_background.png" id="5_6wle4"]
+[ext_resource type="Texture2D" uid="uid://bhfnsn1g6k0fl" path="res://Textures/fhd_textures/Спрайт-hp2.png" id="5_6yogj"]
 [ext_resource type="Texture2D" uid="uid://b5ljsjaq31qr6" path="res://Textures/Gui/exp_progress.png" id="5_y27g4"]
+[ext_resource type="Texture2D" uid="uid://bj0hekjlaxxc0" path="res://Textures/fhd_textures/Спрайт-hp3.png" id="6_5wl5f"]
+[ext_resource type="Texture2D" uid="uid://dypxiq2nkbqv5" path="res://Textures/fhd_textures/Спрайт-hp4.png" id="7_6wfxt"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="8_m4a6n"]
+[ext_resource type="Texture2D" uid="uid://dx0lj4l1iqyca" path="res://Textures/fhd_textures/Спрайт-hp5.png" id="8_s7aeh"]
+[ext_resource type="Texture2D" uid="uid://d3uyw5mk2nwpd" path="res://Textures/fhd_textures/Спрайт-hp6.png" id="9_lksrn"]
+[ext_resource type="Texture2D" uid="uid://chexxtogd3hoi" path="res://Textures/fhd_textures/Спрайт-hp7.png" id="10_qpvtc"]
+[ext_resource type="Texture2D" uid="uid://cxm4xgjyndia0" path="res://Textures/fhd_textures/Спрайт-hp8.png" id="11_ohbjj"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_hb50k"]
 radius = 30.0
@@ -28,6 +35,35 @@ corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
 corner_radius_bottom_left = 8
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_178he"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_6yogj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_5wl5f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6wfxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_s7aeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_lksrn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_qpvtc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_ohbjj")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_wria4"]
 radius = 200.0
@@ -74,6 +110,12 @@ show_percentage = false
 [node name="Sprite2D" type="Sprite2D" parent="ProgressBar"]
 position = Vector2(116, 58)
 texture = ExtResource("4_a4n33")
+
+[node name="Animated_Hp_Bar" type="AnimatedSprite2D" parent="ProgressBar"]
+texture_filter = 1
+position = Vector2(279, 126)
+sprite_frames = SubResource("SpriteFrames_178he")
+frame_progress = 0.42209
 
 [node name="Sword" parent="." instance=ExtResource("5_6o3id")]
 process_mode = 4

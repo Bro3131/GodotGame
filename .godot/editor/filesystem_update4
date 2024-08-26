@@ -1,10 +1,3 @@
-res://testgame.tscn
-res://mobtest.tscn
-res://testgun.tscn
+res://animation_char_sprint.tres
 res://playertest.tscn
-res://virtual_joystick.tscn
-res://ui.tscn
-res://addons/virtual_joystick/test/test.tscn
-res://Sword/sword_test.tscn
-res://Sword/sword.tscn
-res://experience.tscn
+res://animation_char_sprint.tscn
