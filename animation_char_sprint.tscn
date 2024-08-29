@@ -7,5 +7,5 @@
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 sprite_frames = ExtResource("1_edera")
-frame = 4
-frame_progress = 0.171117
+frame = 1
+frame_progress = 0.963968
