@@ -1,0 +1,50 @@
+[gd_resource type="SpriteFrames" load_steps=11 format=3 uid="uid://bkp1b33nn42o0"]
+
+[ext_resource type="Texture2D" uid="uid://b607pop5mu2bj" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar1.png" id="1_yccgu"]
+[ext_resource type="Texture2D" uid="uid://dvbx2rp8kjhiq" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar2.png" id="2_7uo42"]
+[ext_resource type="Texture2D" uid="uid://clvp0s1grsqc1" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar3.png" id="3_cfpg1"]
+[ext_resource type="Texture2D" uid="uid://ydv7enlbe2tx" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar4.png" id="4_dfqoo"]
+[ext_resource type="Texture2D" uid="uid://dgi4ca3pghxtc" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar5.png" id="5_c0n1w"]
+[ext_resource type="Texture2D" uid="uid://dykflsav7bkcx" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar6.png" id="6_s6f6c"]
+[ext_resource type="Texture2D" uid="uid://dd772n1yv3hiw" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar7.png" id="7_3cso2"]
+[ext_resource type="Texture2D" uid="uid://c2ixmqu8bbfk2" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar8.png" id="8_v43u2"]
+[ext_resource type="Texture2D" uid="uid://7woei4r4edr7" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar9.png" id="9_x7bn3"]
+[ext_resource type="Texture2D" uid="uid://dc8wc7k7llei2" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar10.png" id="10_okpq1"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 100.0,
+"texture": ExtResource("1_yccgu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_7uo42")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_cfpg1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_dfqoo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_c0n1w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_s6f6c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_3cso2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_v43u2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_x7bn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_okpq1")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]

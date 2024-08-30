@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://ba8jorua5vvx2"]
+
+[ext_resource type="Texture2D" uid="uid://dniapeb4q3m5" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Health_Bar_Back.png" id="1_b651v"]
+[ext_resource type="SpriteFrames" uid="uid://bkp1b33nn42o0" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Level_Bar_Animation.tres" id="2_wtfda"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="HealthBarBack" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_b651v")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = ExtResource("2_wtfda")
+frame_progress = 0.587247

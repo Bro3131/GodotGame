@@ -1,4 +1,5 @@
 AnimatedSprite2D
+Node2D
 Sprite2D
 CanvasLayer
 CollisionShape2D
@@ -11,4 +12,3 @@ TextureProgressBar
 Control
 AnimationPlayer
 CharacterBody2D
-MyHitBox

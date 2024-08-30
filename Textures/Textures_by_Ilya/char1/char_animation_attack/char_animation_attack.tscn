@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://cmmh27q7reiha"]
+
+[ext_resource type="SpriteFrames" uid="uid://dmld8lj1v7i5g" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Animation_attack.tres" id="1_qlkew"]
+
+[node name="Node2D" type="Node2D"]
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+sprite_frames = ExtResource("1_qlkew")
+frame_progress = 0.783855
