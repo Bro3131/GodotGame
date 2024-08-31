@@ -21,3 +21,4 @@ res://Area2D.gd
 res://bullettest.gd
 res://export_presets.cfg
 res://animation_char_sprint.tres
+res://animation_char_sprint.tscn

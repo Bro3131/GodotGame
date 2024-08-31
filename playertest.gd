@@ -21,6 +21,9 @@ var move_vector := Vector2.ZERO
 func _ready():
 	add_to_group("player")
 	set_physics_process(true)
+	$CharAnims/Attack.animation_looped = false
+	$CharAnims/Run.animation_looped = false
+	$CharAnims/Idle.animation_looped = false
 
 
 func _on_attack_button_pressed():
