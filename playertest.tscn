@@ -1,26 +1,22 @@
-[gd_scene load_steps=23 format=3 uid="uid://c5ldhpn6hxvjo"]
+[gd_scene load_steps=17 format=3 uid="uid://c5ldhpn6hxvjo"]
 
-[ext_resource type="PackedScene" uid="uid://pbmyh1qru7p" path="res://characters/happy_boo/happy_boo.tscn" id="1_knle0"]
 [ext_resource type="Script" path="res://playertest.gd" id="1_w324g"]
+[ext_resource type="PackedScene" uid="uid://b47s10r2ejx88" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Char_Anims.tscn" id="2_knh63"]
 [ext_resource type="PackedScene" uid="uid://bgs35bewh5xui" path="res://testgun.tscn" id="3_ko0p8"]
 [ext_resource type="Texture2D" uid="uid://dc134qsbse8m7" path="res://Спрайт-0002.png" id="4_a4n33"]
 [ext_resource type="PackedScene" uid="uid://bnfrvrp11fd8f" path="res://Sword/sword.tscn" id="5_6o3id"]
 [ext_resource type="Texture2D" uid="uid://bp8g23pgap60a" path="res://Textures/Gui/exp_background.png" id="5_6wle4"]
-[ext_resource type="Texture2D" uid="uid://bhfnsn1g6k0fl" path="res://Textures/fhd_textures/Спрайт-hp2.png" id="5_6yogj"]
 [ext_resource type="Texture2D" uid="uid://b5ljsjaq31qr6" path="res://Textures/Gui/exp_progress.png" id="5_y27g4"]
-[ext_resource type="Texture2D" uid="uid://bj0hekjlaxxc0" path="res://Textures/fhd_textures/Спрайт-hp3.png" id="6_5wl5f"]
-[ext_resource type="Texture2D" uid="uid://dypxiq2nkbqv5" path="res://Textures/fhd_textures/Спрайт-hp4.png" id="7_6wfxt"]
 [ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="8_m4a6n"]
-[ext_resource type="Texture2D" uid="uid://dx0lj4l1iqyca" path="res://Textures/fhd_textures/Спрайт-hp5.png" id="8_s7aeh"]
-[ext_resource type="Texture2D" uid="uid://d3uyw5mk2nwpd" path="res://Textures/fhd_textures/Спрайт-hp6.png" id="9_lksrn"]
-[ext_resource type="Texture2D" uid="uid://chexxtogd3hoi" path="res://Textures/fhd_textures/Спрайт-hp7.png" id="10_qpvtc"]
-[ext_resource type="Texture2D" uid="uid://cxm4xgjyndia0" path="res://Textures/fhd_textures/Спрайт-hp8.png" id="11_ohbjj"]
+[ext_resource type="Texture2D" uid="uid://cijo7squi50oj" path="res://Textures/Gui/321023.png" id="10_ljoh5"]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_hb50k"]
-radius = 30.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0fqah"]
+radius = 58.0
+height = 222.034
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_7eqyf"]
-radius = 38.0
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xuhpp"]
+radius = 59.0
+height = 224.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5quhl"]
 bg_color = Color(0.18359, 0.18359, 0.18359, 1)
@@ -40,25 +36,25 @@ corner_radius_bottom_left = 8
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_6yogj")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_5wl5f")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_6wfxt")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_s7aeh")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_lksrn")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_qpvtc")
+"texture": null
 }, {
 "duration": 1.0,
-"texture": ExtResource("11_ohbjj")
+"texture": null
 }],
 "loop": true,
 "name": &"default",
@@ -77,14 +73,17 @@ platform_floor_layers = 0
 script = ExtResource("1_w324g")
 joystick_left = NodePath("Joysticks/Virtual Joystick")
 
-[node name="HappyBoo" parent="." instance=ExtResource("1_knle0")]
+[node name="CharAnims" parent="." instance=ExtResource("2_knh63")]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_hb50k")
+position = Vector2(3, -91)
+shape = SubResource("CapsuleShape2D_0fqah")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 
 [node name="testgun" parent="." instance=ExtResource("3_ko0p8")]
+process_mode = 4
+visible = false
 position = Vector2(-1, -38)
 
 [node name="HurtBox" type="Area2D" parent="."]
@@ -93,7 +92,8 @@ collision_layer = 0
 collision_mask = 2
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
-shape = SubResource("CircleShape2D_7eqyf")
+position = Vector2(3, -91)
+shape = SubResource("CapsuleShape2D_xuhpp")
 debug_color = Color(0.927448, 2.40654e-06, 0.506634, 0.42)
 
 [node name="ProgressBar" type="ProgressBar" parent="."]
@@ -158,12 +158,14 @@ horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="GrabArea" type="Area2D" parent="."]
+visible = false
 collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
 shape = SubResource("CircleShape2D_wria4")
 
 [node name="CollectArea" type="Area2D" parent="."]
+visible = false
 collision_mask = 9
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea"]
@@ -173,5 +175,13 @@ shape = SubResource("CircleShape2D_2psl8")
 
 [node name="Virtual Joystick" parent="Joysticks" instance=ExtResource("8_m4a6n")]
 
+[node name="AttackButton" type="Button" parent="Joysticks"]
+offset_left = 1649.0
+offset_top = 822.0
+offset_right = 1857.0
+offset_bottom = 1030.0
+icon = ExtResource("10_ljoh5")
+
 [connection signal="area_entered" from="GrabArea" to="." method="_on_grab_area_area_entered"]
 [connection signal="area_entered" from="CollectArea" to="." method="_on_collect_area_area_entered"]
+[connection signal="pressed" from="Joysticks/AttackButton" to="." method="_on_attack_button_pressed"]

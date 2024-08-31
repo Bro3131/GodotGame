@@ -20,3 +20,4 @@ res://characters/happy_boo/happy_boo.tscn
 res://Area2D.gd
 res://bullettest.gd
 res://export_presets.cfg
+res://animation_char_sprint.tres

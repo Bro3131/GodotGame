@@ -22,11 +22,17 @@ func _ready():
 	add_to_group("player")
 	set_physics_process(true)
 
-func _process(delta: float) -> void:
-	## Movement using the joystick output:
-#	if joystick_left and joystick_left.is_pressed:
-#		position += joystick_left.output * speed * delta
+
+func _on_attack_button_pressed():
+	$CharAnims/Run.visible = false
+	$CharAnims/Idle.visible = false
+	$CharAnims/Attack.visible = true
+	$CharAnims/Attack.play("default")
+	$CharAnims/AttackBox.play("attack")
 	
+
+
+func _process(delta: float) -> void:
 	## Movement using Input functions:
 	move_vector = Vector2.ZERO
 	move_vector = Input.get_vector("ui_left","ui_right","ui_up","ui_down")
@@ -35,24 +41,32 @@ func _process(delta: float) -> void:
 	# Rotation:
 	if joystick_right and joystick_right.is_pressed:
 		rotation = joystick_right.output.angle()
+		
+	velocity.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
+	velocity.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")  
+	if velocity.x > 0:
+		$CharAnims/Attack.scale.x = 2
+		$CharAnims/Idle.scale.x = 2
+		$CharAnims/Run.scale.x = 2
+	elif velocity.x < 0:
+		$CharAnims/Attack.scale.x = -2
+		$CharAnims/Idle.scale.x = -2
+		$CharAnims/Run.scale.x = -2
 
 	if move_vector.length() > 0.0:
-		$HappyBoo.play_walk_animation()
+		if $CharAnims/Attack.is_playing() != true:
+			$CharAnims/Attack.visible = false
+			$CharAnims/Idle.visible = false
+			$CharAnims/Run.visible = true
+			$CharAnims/Run.play("default")
 	else:
-		$HappyBoo.play_idle_animation()
-
-#func _physics_process(delta):
-	#var direction = Input.get_vector("move_left", "move_right", "move_up", "move_down")
-	#velocity = direction * 600
-	#move_and_slide()
-	#
-	#
-	#if velocity.length() > 0.0:
-		#$HappyBoo.play_walk_animation()
-	#else:
-		#$HappyBoo.play_idle_animation()
-
-	const DAMAGE_RATE = 5.0
+		if $CharAnims/Attack.is_playing() != true:
+			$CharAnims/Attack.visible = false
+			$CharAnims/Run.visible = false
+			$CharAnims/Idle.visible = true
+		
+		
+	const DAMAGE_RATE = 1.0
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
@@ -60,6 +74,8 @@ func _process(delta: float) -> void:
 		
 		if health <= 0.0:
 			health_gone.emit()
+			
+
 
 
 func add_experience(amount: int):
