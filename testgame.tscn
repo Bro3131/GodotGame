@@ -19,15 +19,15 @@ layer = -33
 
 [node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
 anchors_preset = -1
-anchor_right = 0.0463023
-anchor_bottom = 0.0191919
-offset_right = 1481.0
-offset_bottom = 976.0
+anchor_right = 1.08339
+anchor_bottom = 1.03644
+offset_right = -158.1
+offset_bottom = -30.3528
 color = Color(0.297433, 0.475763, 0.214713, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="Player" parent="." instance=ExtResource("1_s0lxf")]
-position = Vector2(771, 497)
+position = Vector2(959, 542)
 platform_floor_layers = 4294967288
 
 [node name="Path2D" type="Path2D" parent="Player"]

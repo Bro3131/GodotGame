@@ -174,12 +174,16 @@ shape = SubResource("CircleShape2D_2psl8")
 [node name="Joysticks" type="CanvasLayer" parent="."]
 
 [node name="Virtual Joystick" parent="Joysticks" instance=ExtResource("8_m4a6n")]
+offset_left = 66.0
+offset_top = -347.0
+offset_right = 323.0
+offset_bottom = -81.0
 
 [node name="AttackButton" type="Button" parent="Joysticks"]
-offset_left = 1649.0
-offset_top = 822.0
-offset_right = 1857.0
-offset_bottom = 1030.0
+offset_left = 1592.0
+offset_top = 750.0
+offset_right = 1846.0
+offset_bottom = 1004.0
 icon = ExtResource("10_ljoh5")
 
 [connection signal="area_entered" from="GrabArea" to="." method="_on_grab_area_area_entered"]
