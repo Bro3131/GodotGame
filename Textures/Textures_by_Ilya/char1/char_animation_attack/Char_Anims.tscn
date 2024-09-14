@@ -3,11 +3,11 @@
 [ext_resource type="SpriteFrames" uid="uid://pp1kd31rgj8f" path="res://Textures/Textures_by_Ilya/char1/character_animation_sprint/animation_char_sprint.tres" id="1_3rmbe"]
 [ext_resource type="SpriteFrames" uid="uid://dmld8lj1v7i5g" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Animation_attack.tres" id="1_qlkew"]
 [ext_resource type="Script" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Area2D.gd" id="2_axdsr"]
-[ext_resource type="Texture2D" uid="uid://djgjsobq3hn6g" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk1.png" id="4_x042c"]
-[ext_resource type="Texture2D" uid="uid://dwge3q8heb3w5" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk2.png" id="5_dng2l"]
-[ext_resource type="Texture2D" uid="uid://ml8p71iej5y5" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk3.png" id="6_2lfya"]
-[ext_resource type="Texture2D" uid="uid://k33swab0wywc" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk4.png" id="7_by866"]
-[ext_resource type="Texture2D" uid="uid://udhx0chvqcck" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk5.png" id="8_0dsmw"]
+[ext_resource type="Texture2D" uid="uid://bjq1g2ev4dvlw" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk1.png" id="4_x042c"]
+[ext_resource type="Texture2D" uid="uid://die86yc40e67u" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk2.png" id="5_dng2l"]
+[ext_resource type="Texture2D" uid="uid://ceeqxomr52skp" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk3.png" id="6_2lfya"]
+[ext_resource type="Texture2D" uid="uid://cbxsp73ryl1ai" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk4.png" id="7_by866"]
+[ext_resource type="Texture2D" uid="uid://cpb31ludavg8k" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk5.png" id="8_0dsmw"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6ctj"]
 radius = 13.5716
@@ -196,6 +196,7 @@ animations = [{
 [node name="CharAnims" type="Node2D"]
 
 [node name="Attack" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_qlkew")
@@ -231,11 +232,7 @@ offset = Vector2(-40, -38.5)
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_6h3fe")
-<<<<<<< HEAD
-frame_progress = 0.302135
-=======
 frame_progress = 0.433566
 offset = Vector2(43, -71)
->>>>>>> 7e476dcf03053adbacfba304c4325422cde28d85
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]

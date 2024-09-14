@@ -2,8 +2,8 @@ extends CanvasLayer
 
 @onready var main_menu = $MainMenu
 @onready var settings_menu = $SettingsMenu
-@onready var ui = $"."
 @onready var end_game_screen = $EndGameScreen
+@onready var pause_menu = $PauseMenu
 
 func _ready():
 	pass
@@ -38,3 +38,19 @@ func _on_restart_pressed():
 
 func _on_go_back_pressed():
 	get_tree().change_scene_to_file("res://ui.tscn")
+
+# PAuse menu
+
+
+func _on_pause_settings_pressed():
+	settings_menu.visible = false
+	pause_menu.visible = false
+
+func _on_quit_to_main_menu_pressed():
+	pause_menu.visible = false
+	get_tree().change_scene_to_file("res://ui.tscn")
+
+
+func _on_continue_pressed():
+	pause_menu.visible = false
+	get_tree().paused = false

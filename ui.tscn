@@ -213,9 +213,67 @@ layout_mode = 2
 size_flags_vertical = 3
 text = "Back to main menu"
 
+[node name="PauseMenu" type="Control" parent="ui"]
+visible = false
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="ui/PauseMenu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="ui/PauseMenu/CenterContainer"]
+custom_minimum_size = Vector2(800, 650)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="ui/PauseMenu/CenterContainer/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ui/PauseMenu/CenterContainer/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Pause" type="Label" parent="ui/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 71
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="Button" parent="ui/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 71
+text = "Continue "
+
+[node name="PauseSettings" type="Button" parent="ui/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 71
+text = "Settings"
+
+[node name="Quit_to_mainMenu" type="Button" parent="ui/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 71
+text = "Quit ot main menu
+"
+
 [connection signal="pressed" from="ui/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Start" to="ui" method="_on_start_pressed"]
 [connection signal="pressed" from="ui/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Settings" to="ui" method="_on_settings_pressed"]
 [connection signal="pressed" from="ui/MainMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Quit" to="ui" method="_on_quit_pressed"]
 [connection signal="pressed" from="ui/SettingsMenu/CenterContainer/PanelContainer/MarginContainer/ScrollContainer/VBoxContainer/Back" to="ui" method="_on_back_pressed"]
 [connection signal="pressed" from="ui/EndGameScreen/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/restart" to="ui" method="_on_restart_pressed"]
 [connection signal="pressed" from="ui/EndGameScreen/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/GoBack" to="ui" method="_on_go_back_pressed"]
+[connection signal="pressed" from="ui/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Continue" to="ui" method="_on_continue_pressed"]
+[connection signal="pressed" from="ui/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/PauseSettings" to="ui" method="_on_pause_settings_pressed"]
+[connection signal="pressed" from="ui/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer/Quit_to_mainMenu" to="ui" method="_on_quit_to_main_menu_pressed"]

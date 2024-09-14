@@ -1,18 +1,14 @@
 res://testgame.tscn
-res://characters/happy_boo/happy_boo.gd
-res://Textures/Textures_by_Ilya/char1/character_animation_sprint/animation_char_sprint.tres
+res://Area2D.gd
 res://Textures/Textures_by_Ilya/char1/char_animation_attack/Animation_attack.tres
 res://testgun.tscn
 res://mobtest.tscn
 res://bullettest.tscn
 res://playertest.tscn
 res://Textures/Textures_by_Ilya/char1/char_animation_attack/Char_Anims.tscn
-res://addons/virtual_joystick/virtual_joystick_scene.tscn
+res://characters/slime/slime.tscn
 res://ui.tscn
-<<<<<<< HEAD
 res://characters/happy_boo/happy_boo.tscn
 res://animation_char_sprint.tscn
-res://Textures/Textures_by_Ilya/char1/char_animation_attack/char_animation_attack.tscn
-res://Textures/Textures_by_Ilya/char1/character_animation_sprint/animation_char_sprint.tscn
-=======
->>>>>>> 7e476dcf03053adbacfba304c4325422cde28d85
+res://ui.gd
+res://testgame.gd
