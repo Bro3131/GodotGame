@@ -5,10 +5,11 @@ signal health_gone
 var health = 100.0
 var experience: int = 0
 var level: int = 1
-@onready var exp_bar = %ExpBar
-@onready var level_label = %Level_label
+@onready var exp_bar = $bars/ExpBar/ExpBaPr
+@onready var level_label = $bars/ExpBar/Level_label
 @onready var grab_area = $GrabArea
 @onready var collect_area = $CollectArea
+@onready var health_bar = $bars/HealthBar/Health
 
 
 @export var speed : float = 600
@@ -21,6 +22,7 @@ var move_vector := Vector2.ZERO
 func _ready():
 	add_to_group("player")
 	set_physics_process(true)
+	exp_bar.value = 0
 
 
 
@@ -73,12 +75,13 @@ func _process(delta: float) -> void:
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
-		%HealthBar.value = health
+		health_bar.value = health
 		
 		if health <= 0.0:
 			health_gone.emit()
 			
-
+	$bars/HealthBar/HealthBarAnimation.play("default")
+	
 
 
 func add_experience(amount: int):
@@ -97,16 +100,6 @@ func check_level_up():
 		level_label.text = str("Level: ",level)
 		# Дополнительно: добавьте у	лучшения для игрока при повышении уровня
 
-
-#func calculate_experiencecap():
-	#var exp_cap = level
-	#if level < 20:
-		#exp_cap = level*5
-	#elif level < 40:
-		#exp_cap + 95 * (level-19)*8
-	#else:
-		#exp_cap = 255 + (level-39)*12
-	#return exp_cap
 
 func set_expbar(exp):
 	exp_bar.value = exp

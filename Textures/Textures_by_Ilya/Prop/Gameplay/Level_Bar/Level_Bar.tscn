@@ -1,0 +1,44 @@
+[gd_scene load_steps=4 format=3 uid="uid://ba8jorua5vvx2"]
+
+[ext_resource type="Texture2D" uid="uid://dniapeb4q3m5" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Health_Bar_Back.png" id="1_b651v"]
+[ext_resource type="Texture2D" uid="uid://d1kj6nvfqumkp" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Level_line1.png" id="2_cby58"]
+[ext_resource type="SpriteFrames" uid="uid://bkp1b33nn42o0" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Level_Bar_Animation.tres" id="2_wtfda"]
+
+[node name="ExpBar" type="Node2D"]
+
+[node name="HealthBarBack" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-16, 26)
+texture = ExtResource("1_b651v")
+
+[node name="ExpBaPr" type="TextureProgressBar" parent="."]
+offset_left = -416.0
+offset_top = -174.0
+offset_right = 384.0
+offset_bottom = 226.0
+step = 0.01
+value = 100.0
+texture_progress = ExtResource("2_cby58")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-16, 26)
+sprite_frames = ExtResource("2_wtfda")
+frame_progress = 0.587247
+
+[node name="Level_label" type="Label" parent="."]
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = 237.0
+offset_top = -11.0
+offset_right = 332.0
+offset_bottom = 12.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 16
+text = "Level: 1"
+horizontal_alignment = 1
+vertical_alignment = 1

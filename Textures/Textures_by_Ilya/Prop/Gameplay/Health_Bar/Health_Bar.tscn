@@ -1,0 +1,30 @@
+[gd_scene load_steps=4 format=3 uid="uid://52j4jdu4sqew"]
+
+[ext_resource type="Texture2D" uid="uid://dniapeb4q3m5" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Health_Bar_Back.png" id="1_076qd"]
+[ext_resource type="Texture2D" uid="uid://cejimnqmiwhac" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Health_line1.png" id="2_a4s8h"]
+[ext_resource type="SpriteFrames" uid="uid://cj4sps2fvwma8" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/new_sprite_frames.tres" id="3_uv58r"]
+
+[node name="HealthBar" type="Node2D"]
+
+[node name="HealthBarBack" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-16, 26)
+texture = ExtResource("1_076qd")
+
+[node name="Health" type="TextureProgressBar" parent="."]
+offset_left = -416.0
+offset_top = -164.0
+offset_right = 384.0
+offset_bottom = 226.0
+pivot_offset = Vector2(400, 190)
+step = 0.01
+value = 100.0
+nine_patch_stretch = true
+texture_progress = ExtResource("2_a4s8h")
+
+[node name="HealthBarAnimation" type="AnimatedSprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-16, 26)
+sprite_frames = ExtResource("3_uv58r")
+frame = 7
+frame_progress = 1.0

@@ -5,21 +5,26 @@ extends Node2D
 @onready var main_menu = $UIs/ui/MainMenu
 @onready var settings_menu = $UIs/ui/SettingsMenu
 @onready var pause_menu = $UIs/ui/PauseMenu
-
+@onready var time_label = $CanvasLayer/time
+var elapsed_time # Переменная для отслеживания времени
 
 func _ready():
-	#var ui_scene = ui_scene_packed.instantiate()
-	#add_child(ui_scene)
-	#var ui_node = ui_scene.get_node("ui")
-	#end_game_screen = ui_node.get_node("EndGameScreen")
 	end_game_screen.visible = false
-	#main_menu = ui_node.get_node("MainMenu")
 	main_menu.visible = false
-	#settings_menu = ui_node.get_node("SettingsMenu")
 	settings_menu.visible = false
-	#settings_menu = ui_node.get_node("PauseMenu")
 	pause_menu.visible = false
 	get_tree().paused = false
+	elapsed_time = 0.0
+
+func _process(delta):
+	elapsed_time += delta
+	update_time_label()
+
+# Обновляем текст Label с временем
+func update_time_label():
+	var minutes = int(elapsed_time) / 60
+	var seconds = int(elapsed_time) % 60
+	time_label.text = "%02d:%02d" % [minutes, seconds]
 
 
 func spawn_mob():

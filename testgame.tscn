@@ -32,13 +32,21 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -86.0
-offset_top = 27.0
-offset_right = -2.0
-offset_bottom = 111.0
+offset_left = -1007.0
+offset_top = 65.0
+offset_right = -923.0
+offset_bottom = 149.0
 grow_horizontal = 0
 icon = ExtResource("5_hxf4k")
 expand_icon = true
+
+[node name="time" type="Label" parent="CanvasLayer"]
+offset_left = 907.0
+offset_top = 15.0
+offset_right = 1001.0
+offset_bottom = 65.0
+theme_override_font_sizes/font_size = 36
+text = "00:00"
 
 [node name="Player" parent="." instance=ExtResource("1_s0lxf")]
 position = Vector2(959, 542)
