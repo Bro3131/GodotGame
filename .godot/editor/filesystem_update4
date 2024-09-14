@@ -1,6 +1,4 @@
 res://testgame.tscn
-res://Area2D.gd
-res://Textures/Textures_by_Ilya/char1/char_animation_attack/Animation_attack.tres
 res://testgun.tscn
 res://mobtest.tscn
 res://bullettest.tscn
@@ -10,5 +8,3 @@ res://characters/slime/slime.tscn
 res://ui.tscn
 res://characters/happy_boo/happy_boo.tscn
 res://animation_char_sprint.tscn
-res://ui.gd
-res://testgame.gd
