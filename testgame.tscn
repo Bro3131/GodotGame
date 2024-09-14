@@ -1,9 +1,10 @@
-[gd_scene load_steps=6 format=3 uid="uid://djlvbcsqvnxlw"]
+[gd_scene load_steps=7 format=3 uid="uid://djlvbcsqvnxlw"]
 
 [ext_resource type="Script" path="res://testgame.gd" id="1_aisom"]
 [ext_resource type="PackedScene" uid="uid://c5ldhpn6hxvjo" path="res://playertest.tscn" id="1_s0lxf"]
 [ext_resource type="PackedScene" uid="uid://bgyuj6ykvf7r5" path="res://characters/treetest.tscn" id="2_ks5bi"]
 [ext_resource type="PackedScene" uid="uid://dncs6766etnt3" path="res://ui.tscn" id="4_wuws7"]
+[ext_resource type="Texture2D" uid="uid://dlo4a2lq8w688" path="res://Textures/Gui/Pause-Button-PNG-Free-Download.png" id="5_hxf4k"]
 
 [sub_resource type="Curve2D" id="Curve2D_0t50q"]
 _data = {
@@ -26,6 +27,18 @@ offset_right = -158.1
 offset_bottom = -30.3528
 color = Color(0.297433, 0.475763, 0.214713, 1)
 metadata/_edit_use_anchors_ = true
+
+[node name="PauseButton" type="Button" parent="CanvasLayer"]
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -86.0
+offset_top = 27.0
+offset_right = -2.0
+offset_bottom = 111.0
+grow_horizontal = 0
+icon = ExtResource("5_hxf4k")
+expand_icon = true
 
 [node name="Player" parent="." instance=ExtResource("1_s0lxf")]
 position = Vector2(959, 542)
@@ -68,5 +81,6 @@ autostart = true
 
 [node name="UIs" parent="." instance=ExtResource("4_wuws7")]
 
+[connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="health_gone" from="Player" to="." method="_on_player_health_gone"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

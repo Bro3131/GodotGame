@@ -96,7 +96,7 @@ position = Vector2(3, -91)
 shape = SubResource("CapsuleShape2D_xuhpp")
 debug_color = Color(0.927448, 2.40654e-06, 0.506634, 0.42)
 
-[node name="ProgressBar" type="ProgressBar" parent="."]
+[node name="HealthBar" type="ProgressBar" parent="."]
 unique_name_in_owner = true
 offset_left = -730.0
 offset_top = -458.0
@@ -107,11 +107,11 @@ theme_override_styles/fill = SubResource("StyleBoxFlat_nw82f")
 value = 100.0
 show_percentage = false
 
-[node name="Sprite2D" type="Sprite2D" parent="ProgressBar"]
+[node name="Sprite2D" type="Sprite2D" parent="HealthBar"]
 position = Vector2(116, 58)
 texture = ExtResource("4_a4n33")
 
-[node name="Animated_Hp_Bar" type="AnimatedSprite2D" parent="ProgressBar"]
+[node name="Animated_Hp_Bar" type="AnimatedSprite2D" parent="HealthBar"]
 texture_filter = 1
 position = Vector2(279, 126)
 sprite_frames = SubResource("SpriteFrames_178he")

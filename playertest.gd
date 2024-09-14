@@ -73,7 +73,7 @@ func _process(delta: float) -> void:
 	var overlapping_mobs = %HurtBox.get_overlapping_bodies()
 	if overlapping_mobs.size() > 0:
 		health -= DAMAGE_RATE * overlapping_mobs.size() * delta
-		%ProgressBar.value = health
+		%HealthBar.value = health
 		
 		if health <= 0.0:
 			health_gone.emit()
