@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://dwge3q8heb3w5"
-path="res://.godot/imported/character_animation_afk2.png-d5faa15909156e0e54fb5ea13ce19938.ctex"
+uid="uid://k33swab0wywc"
+path="res://.godot/imported/character_animation_afk4.png-d6389943d3e3c94ed9ddcf96f096118f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk2.png"
-dest_files=["res://.godot/imported/character_animation_afk2.png-d5faa15909156e0e54fb5ea13ce19938.ctex"]
+source_file="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk4.png"
+dest_files=["res://.godot/imported/character_animation_afk4.png-d6389943d3e3c94ed9ddcf96f096118f.ctex"]
 
 [params]
 
