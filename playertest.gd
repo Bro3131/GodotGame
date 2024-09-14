@@ -15,7 +15,6 @@ var level: int = 1
 
 
 
-
 @export var speed : float = 600
 
 @export var joystick_left : VirtualJoystick
@@ -30,32 +29,12 @@ var is_attacking = false#атака
 func _ready():
 	add_to_group("player")
 	set_physics_process(true)
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
+
 	exp_bar.value = 0
 
-=======
 	
 	# Подписываемся на сигнал анимации атаки
 	$CharAnims/Attack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
->>>>>>> Stashed changes
-=======
-	
-	# Подписываемся на сигнал анимации атаки
-	$CharAnims/Attack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
->>>>>>> Stashed changes
-=======
-	
-	# Подписываемся на сигнал анимации атаки
-	$CharAnims/Attack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
->>>>>>> Stashed changes
-=======
-	
-	# Подписываемся на сигнал анимации атаки
-	$CharAnims/Attack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
->>>>>>> Stashed changes
 
 
 func _on_attack_button_pressed():
@@ -145,34 +124,10 @@ func _process(delta: float) -> void:
 		if health <= 0.0:
 			health_gone.emit()
 			
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
 	$bars/HealthBar/HealthBarAnimation.play("default")
 	
-=======
 	if is_attacking:
 		start_attack()
-=======
-	if is_attacking:
-		start_attack()
-=======
-	if is_attacking:
-		start_attack()
-=======
-	if is_attacking:
-		start_attack()
-
->>>>>>> Stashed changes
-
->>>>>>> Stashed changes
-
->>>>>>> Stashed changes
-
-
->>>>>>> Stashed changes
-
 
 func add_experience(amount: int):
 	experience += amount

@@ -4,22 +4,6 @@
 [ext_resource type="SpriteFrames" uid="uid://dmld8lj1v7i5g" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Animation_attack.tres" id="1_qlkew"]
 [ext_resource type="Texture2D" uid="uid://d1ugnrf2ochl2" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final1.png" id="2_1foyd"]
 [ext_resource type="Script" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Area2D.gd" id="2_axdsr"]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-[ext_resource type="Texture2D" uid="uid://bjq1g2ev4dvlw" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk1.png" id="4_x042c"]
-[ext_resource type="Texture2D" uid="uid://die86yc40e67u" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk2.png" id="5_dng2l"]
-[ext_resource type="Texture2D" uid="uid://ceeqxomr52skp" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk3.png" id="6_2lfya"]
-[ext_resource type="Texture2D" uid="uid://cbxsp73ryl1ai" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk4.png" id="7_by866"]
-[ext_resource type="Texture2D" uid="uid://cpb31ludavg8k" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk5.png" id="8_0dsmw"]
-=======
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 [ext_resource type="Texture2D" uid="uid://313wthefqrnr" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final2.png" id="3_dd20c"]
 [ext_resource type="Texture2D" uid="uid://dbef7wk3ibl6b" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final3.png" id="4_fkir2"]
 [ext_resource type="Texture2D" uid="uid://djgjsobq3hn6g" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk1.png" id="4_x042c"]
@@ -68,16 +52,6 @@ animations = [{
 "name": &"default",
 "speed": 9.0
 }]
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
-<<<<<<< Updated upstream
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
-=======
->>>>>>> Stashed changes
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6ctj"]
 radius = 13.5716
