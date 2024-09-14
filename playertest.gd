@@ -25,11 +25,12 @@ func _ready():
 
 
 func _on_attack_button_pressed():
-	$CharAnims/Run.visible = false
-	$CharAnims/Idle.visible = false
-	$CharAnims/Attack.visible = true
-	$CharAnims/Attack.play("default")
-	$CharAnims/AttackBox.play("attack")
+	if !$CharAnims/Attack.is_playing():  # Если анимация атаки не проигрывается
+		$CharAnims/Run.visible = false
+		$CharAnims/Idle.visible = false
+		$CharAnims/Attack.visible = true
+		$CharAnims/Attack.play("default")
+		$CharAnims/AttackBox.play("attack")
 	
 
 
@@ -45,6 +46,7 @@ func _process(delta: float) -> void:
 		
 	velocity.x = Input.get_action_strength("ui_right") - Input.get_action_strength("ui_left")
 	velocity.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")  
+	
 	if velocity.x > 0:
 		$CharAnims/Attack.scale.x = 2
 		$CharAnims/Idle.scale.x = 2
@@ -55,13 +57,13 @@ func _process(delta: float) -> void:
 		$CharAnims/Run.scale.x = -2
 
 	if move_vector.length() > 0.0:
-		if $CharAnims/Attack.is_playing() != true:
+		if !$CharAnims/Attack.is_playing():  # Добавляем проверку, что анимация атаки не проигрывается
 			$CharAnims/Attack.visible = false
 			$CharAnims/Idle.visible = false
 			$CharAnims/Run.visible = true
 			$CharAnims/Run.play("default")
 	else:
-		if $CharAnims/Attack.is_playing() != true:
+		if !$CharAnims/Attack.is_playing():  # Добавляем проверку, что анимация атаки не проигрывается
 			$CharAnims/Attack.visible = false
 			$CharAnims/Run.visible = false
 			$CharAnims/Idle.visible = true

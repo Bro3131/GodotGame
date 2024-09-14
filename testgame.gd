@@ -34,3 +34,7 @@ func _on_player_health_gone():
 	end_game_screen.visible = true
 	get_tree().paused = true
 
+
+
+func _on_mobspawn_timer_timeout():
+	pass # Replace with function body.
