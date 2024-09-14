@@ -258,6 +258,7 @@ theme_override_font_sizes/font_size = 71
 text = "Continue "
 
 [node name="PauseSettings" type="Button" parent="ui/PauseMenu/CenterContainer/PanelContainer/MarginContainer/VBoxContainer"]
+visible = false
 layout_mode = 2
 theme_override_font_sizes/font_size = 71
 text = "Settings"

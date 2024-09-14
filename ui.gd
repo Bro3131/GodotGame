@@ -39,12 +39,14 @@ func _on_restart_pressed():
 func _on_go_back_pressed():
 	get_tree().change_scene_to_file("res://ui.tscn")
 
+
 # PAuse menu
 
+# need to add new pause settings
 
-func _on_pause_settings_pressed():
-	settings_menu.visible = false
-	pause_menu.visible = false
+#func _on_pause_settings_pressed():
+	#settings_menu.visible = true
+	#pause_menu.visible = false
 
 func _on_quit_to_main_menu_pressed():
 	pause_menu.visible = false

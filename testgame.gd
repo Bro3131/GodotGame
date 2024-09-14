@@ -41,3 +41,8 @@ func _on_player_health_gone():
 
 func _on_mobspawn_timer_timeout():
 	pass # Replace with function body.
+
+
+func _on_pause_button_pressed():
+	pause_menu.visible = true
+	get_tree().paused = true
