@@ -15,6 +15,7 @@ var level: int = 1
 
 
 
+
 @export var speed : float = 600
 
 @export var joystick_left : VirtualJoystick
@@ -29,8 +30,6 @@ var is_attacking = false#атака
 func _ready():
 	add_to_group("player")
 	set_physics_process(true)
-
-	exp_bar.value = 0
 
 	
 	# Подписываемся на сигнал анимации атаки
@@ -124,10 +123,13 @@ func _process(delta: float) -> void:
 		if health <= 0.0:
 			health_gone.emit()
 			
+
 	$bars/HealthBar/HealthBarAnimation.play("default")
-	
 	if is_attacking:
 		start_attack()
+
+
+
 
 func add_experience(amount: int):
 	experience += amount

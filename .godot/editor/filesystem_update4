@@ -15,3 +15,5 @@ res://Area2D.gd
 res://Textures/Textures_by_Ilya/char1/char_animation_attack/Area2D.gd
 res://bullettest.gd
 res://export_presets.cfg
+res://animated_sprite_hpd.tscn
+res://testgame.gd

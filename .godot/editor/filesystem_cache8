@@ -2,6 +2,7 @@ fc8a56933c4b1c8d796fdb8f7a9f9475
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ::res://::1726313980
 animated_sprite_hpd.tscn::PackedScene::3166395262344083945::1725271762::0::1::::<><>::
 animation_char_sprint.tres::SpriteFrames::6464083261575448926::1725271762::0::1::::<><>::
@@ -10,6 +11,8 @@ Area2D.gd::GDScript::-1::1725271762::0::1::::<>Area2D<>::
 bullettest.gd::GDScript::-1::1721669180::0::1::::<>Area2D<>::
 bullettest.tscn::PackedScene::8288978598546132067::1726313737::0::1::::<><>::res://bullettest.gd<>uid://dftkbqwsfd68r::::res://pistol/projectile.png
 =======
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 =======
@@ -23,6 +26,9 @@ bullettest.gd::GDScript::-1::1721669180::0::1::::<>Area2D<>::
 bullettest.tscn::PackedScene::8288978598546132067::1726298752::0::1::::<><>::res://bullettest.gd<>uid://dftkbqwsfd68r::::res://pistol/projectile.png
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -36,6 +42,7 @@ icon.png::CompressedTexture2D::621515402784007901::1725271762::1721669180::1::::
 icon.svg::CompressedTexture2D::736511090169923376::1721941018::1721941035::1::::<><>::
 Main_menu.gd::GDScript::-1::1721941018::0::1::::<>RefCounted<>::
 mobtest.gd::GDScript::-1::1725271762::0::1::::<>CharacterBody2D<>::
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -56,6 +63,8 @@ ui.tscn::PackedScene::8076995769413439310::1726313859::0::1::::<><>::res://ui.gd
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 mobtest.tscn::PackedScene::2118152825249569899::1726298752::0::1::::<><>::uid://ogik4s70pgwl::::res://characters/slime/slime.tscn<>res://mobtest.gd<>res://Sword/MyHurtBox.gd
 node_2d.gd::GDScript::-1::1721764630::0::1::::<>RefCounted<>::
 node_2d.tscn::PackedScene::4143417756683625529::1721941280::0::1::::<><>::res://sword/1669927059_kartinkin-net-p-nezeritovii-mech-tekstura-oboi-64.png<>res://Sword/sword.gd<>res://sword/HitBox.gd
@@ -70,6 +79,9 @@ ui.gd::GDScript::-1::1725271762::0::1::::<>CanvasLayer<>::
 ui.tscn::PackedScene::8076995769413439310::1726298752::0::1::::<><>::res://ui.gd<>uid://okvtjgmg07sp::::res://themes/new_theme.tres
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -86,7 +98,11 @@ README.md::TextFile::-1::1721669180::0::1::::<><>::
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ::res://addons/virtual_joystick/::1726313738
+=======
+::res://addons/virtual_joystick/::1726298752
+>>>>>>> Stashed changes
 =======
 ::res://addons/virtual_joystick/::1726298752
 >>>>>>> Stashed changes
@@ -104,7 +120,11 @@ virtual_joystick_plugin.gd::GDScript::-1::1721941018::0::1::::<>EditorPlugin<>::
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 virtual_joystick_scene.tscn::PackedScene::8038149555967335895::1726313738::0::1::::<><>::res://addons/virtual_joystick/virtual_joystick.gd<>uid://bm30au8mjfc2f::::res://addons/virtual_joystick/textures/joystick_base_outline.png<>uid://dt13r06u87fib::::res://addons/virtual_joystick/textures/joystick_tip_arrows.png
+=======
+virtual_joystick_scene.tscn::PackedScene::8038149555967335895::1726298752::0::1::::<><>::res://addons/virtual_joystick/virtual_joystick.gd<>uid://bm30au8mjfc2f::::res://addons/virtual_joystick/textures/joystick_base_outline.png<>uid://dt13r06u87fib::::res://addons/virtual_joystick/textures/joystick_tip_arrows.png
+>>>>>>> Stashed changes
 =======
 virtual_joystick_scene.tscn::PackedScene::8038149555967335895::1726298752::0::1::::<><>::res://addons/virtual_joystick/virtual_joystick.gd<>uid://bm30au8mjfc2f::::res://addons/virtual_joystick/textures/joystick_base_outline.png<>uid://dt13r06u87fib::::res://addons/virtual_joystick/textures/joystick_tip_arrows.png
 >>>>>>> Stashed changes
@@ -133,9 +153,15 @@ treetest.tscn::PackedScene::2858330889401015192::1721669180::0::1::::<><>::uid:/
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ::res://characters/happy_boo/::1726313738
 happy_boo.gd::GDScript::-1::1721669180::0::1::::<>Node2D<>::
 happy_boo.tscn::PackedScene::31049085407951015::1726313738::0::1::::<><>::res://characters/happy_boo/happy_boo.gd<>uid://b7rhtttevhxtj::::res://characters/ground_shadow.png<>uid://ng8e5ot0dtpd::::res://characters/happy_boo/square_foot.png<>uid://dhapxq8y8ow57::::res://characters/happy_boo/square_lower_leg.png<>uid://qmqpm6asge1i::::res://characters/happy_boo/square_upper_leg.png<>uid://cksiu5gst6fmp::::res://characters/happy_boo/square_body.png<>uid://cvs0lh814pk7h::::res://characters/happy_boo/square_face.png
+=======
+::res://characters/happy_boo/::1726298752
+happy_boo.gd::GDScript::-1::1721669180::0::1::::<>Node2D<>::
+happy_boo.tscn::PackedScene::31049085407951015::1726298752::0::1::::<><>::res://characters/happy_boo/happy_boo.gd<>uid://b7rhtttevhxtj::::res://characters/ground_shadow.png<>uid://ng8e5ot0dtpd::::res://characters/happy_boo/square_foot.png<>uid://dhapxq8y8ow57::::res://characters/happy_boo/square_lower_leg.png<>uid://qmqpm6asge1i::::res://characters/happy_boo/square_upper_leg.png<>uid://cksiu5gst6fmp::::res://characters/happy_boo/square_body.png<>uid://cvs0lh814pk7h::::res://characters/happy_boo/square_face.png
+>>>>>>> Stashed changes
 =======
 ::res://characters/happy_boo/::1726298752
 happy_boo.gd::GDScript::-1::1721669180::0::1::::<>Node2D<>::
@@ -161,9 +187,15 @@ square_upper_leg.png::CompressedTexture2D::1148792968243506332::1721669180::1721
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ::res://characters/slime/::1726313738
 slime.gd::GDScript::-1::1725271753::0::1::::<>Node2D<>::
 slime.tscn::PackedScene::995535223809565591::1726313738::0::1::::<><>::uid://dvgfmy6vtvjji::::res://characters/slime/slime_body.png<>res://characters/slime/slime.gd<>uid://b7rhtttevhxtj::::res://characters/ground_shadow.png<>uid://c078jrp2yvc4s::::res://characters/slime/slime_face.png<>uid://btbxea1f3vwot::::res://characters/slime/slime_body_hurt.png<>uid://cai2ijnbypqtr::::res://characters/slime/slime_hurt_eyes.png
+=======
+::res://characters/slime/::1726298752
+slime.gd::GDScript::-1::1725271753::0::1::::<>Node2D<>::
+slime.tscn::PackedScene::995535223809565591::1726298752::0::1::::<><>::uid://dvgfmy6vtvjji::::res://characters/slime/slime_body.png<>res://characters/slime/slime.gd<>uid://b7rhtttevhxtj::::res://characters/ground_shadow.png<>uid://c078jrp2yvc4s::::res://characters/slime/slime_face.png<>uid://btbxea1f3vwot::::res://characters/slime/slime_body_hurt.png<>uid://cai2ijnbypqtr::::res://characters/slime/slime_hurt_eyes.png
+>>>>>>> Stashed changes
 =======
 ::res://characters/slime/::1726298752
 slime.gd::GDScript::-1::1725271753::0::1::::<>Node2D<>::
@@ -213,6 +245,7 @@ testgem.png::CompressedTexture2D::7027678389744880663::1725271762::1725271770::1
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ::res://Textures/Gui/::1726313859
 321023.png::CompressedTexture2D::5353839670638467257::1725271762::1725271770::1::::<><>::
 exp_background.png::CompressedTexture2D::3507791816638699462::1725271762::1725271770::1::::<><>::
@@ -226,6 +259,8 @@ character_final.png::CompressedTexture2D::4889246532128388075::1726313859::17263
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 ::res://Textures/Gui/::1725271770
 321023.png::CompressedTexture2D::5353839670638467257::1725271762::1725271770::1::::<><>::
 exp_background.png::CompressedTexture2D::3507791816638699462::1725271762::1725271770::1::::<><>::
@@ -235,6 +270,9 @@ exp_progress.png::CompressedTexture2D::4515373218829492913::1725271762::17252717
 character_final.png::CompressedTexture2D::4889246532128388075::1725271762::1725271770::1::::<><>::
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -246,6 +284,7 @@ animated_sprite_hpd.tscn::PackedScene::6411038821966860114::1725271762::0::1::::
 animation_char_sprint.tres::SpriteFrames::1085395022661219595::1725271762::0::1::::<><>::uid://tbbtr7h5g6wo::::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/Frame/character_animation_sprint1.png<>uid://buh8bj6xx3dbn::::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/Frame/character_animation_sprint2.png<>uid://c3c2fe3263alm::::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/Frame/character_animation_sprint3.png<>uid://c6fmskn8xrwm4::::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/Frame/character_animation_sprint4.png<>uid://d0inybsixch1r::::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/Frame/character_animation_sprint5.png<>uid://ug1h4w0ulx70::::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/Frame/character_animation_sprint6.png<>uid://g2hr7mhri54c::::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/Frame/character_animation_sprint7.png<>uid://bbga8hh48y7v2::::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/Frame/character_animation_sprint8.png<>uid://cfp2rnil15840::::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/Frame/character_animation_sprint9.png<>uid://d031k5m1gho2w::::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/Frame/character_animation_sprint10.png
 animation_char_sprint.tscn::PackedScene::3680911870791105539::1726157214::0::1::::<><>::uid://pp1kd31rgj8f::::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/animation_char_sprint.tres
 character_animation_sprint_all_frame.png::CompressedTexture2D::3646209317365690533::1725271762::1725271770::1::::<><>::
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -288,6 +327,8 @@ character_animated_attack2_final9.png::CompressedTexture2D::7695113150468398900:
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 ::res://Textures/Textures_by_Ilya/char1/character_animation_sprint/Frame/::1725271770
 character_animation_sprint1.png::CompressedTexture2D::1335747996642738790::1725271762::1725271770::1::::<><>::
 character_animation_sprint2.png::CompressedTexture2D::3806654168963308075::1725271762::1725271770::1::::<><>::
@@ -315,6 +356,9 @@ Char_Anims.tscn::PackedScene::4489097914415188615::1726298752::0::1::::<><>::uid
 ::res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/::1725271770
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -329,6 +373,7 @@ character_animated_attack_final6.png::CompressedTexture2D::3785694331808318381::
 character_animated_attack_final7.png::CompressedTexture2D::2972795234488529825::1725271762::1725271770::1::::<><>::
 character_animated_attack_final8.png::CompressedTexture2D::2596875482663791912::1725271762::1725271770::1::::<><>::
 character_animated_attack_final9.png::CompressedTexture2D::4656337008318723202::1725271762::1725271770::1::::<><>::
+<<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
@@ -403,6 +448,8 @@ new_sprite_frames.tres::SpriteFrames::5465528595160737457::1725271762::0::1::::<
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 ::res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame2/::1725271770
 character_animated_attack2_final1.png::CompressedTexture2D::2187144084236857307::1725271762::1725271770::1::::<><>::
 character_animated_attack2_final2.png::CompressedTexture2D::6932611752665344189::1725271762::1725271770::1::::<><>::
@@ -426,6 +473,9 @@ new_sprite_frames.tres::SpriteFrames::5465528595160737457::1725271762::0::1::::<
 ::res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/::1725271770
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
@@ -442,10 +492,16 @@ new_sprite_frames.tres::SpriteFrames::5465528595160737457::1725271762::0::1::::<
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/::1726313859
 Level_Bar.tscn::PackedScene::-1::1726313859::0::1::::<><>::
 Level_Bar_Animation.tres::SpriteFrames::3120856728507686585::1725271762::0::1::::<><>::uid://b607pop5mu2bj::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar1.png<>uid://dvbx2rp8kjhiq::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar2.png<>uid://clvp0s1grsqc1::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar3.png<>uid://ydv7enlbe2tx::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar4.png<>uid://dgi4ca3pghxtc::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar5.png<>uid://dykflsav7bkcx::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar6.png<>uid://dd772n1yv3hiw::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar7.png<>uid://c2ixmqu8bbfk2::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar8.png<>uid://7woei4r4edr7::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar9.png<>uid://dc8wc7k7llei2::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar10.png
 Level_line1.png::CompressedTexture2D::9005418291248496275::1726313859::1726313984::1::::<><>::
+=======
+::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/::1725271762
+Level_Bar_Animation.tres::SpriteFrames::3120856728507686585::1725271762::0::1::::<><>::uid://b607pop5mu2bj::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar1.png<>uid://dvbx2rp8kjhiq::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar2.png<>uid://clvp0s1grsqc1::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar3.png<>uid://ydv7enlbe2tx::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar4.png<>uid://dgi4ca3pghxtc::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar5.png<>uid://dykflsav7bkcx::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar6.png<>uid://dd772n1yv3hiw::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar7.png<>uid://c2ixmqu8bbfk2::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar8.png<>uid://7woei4r4edr7::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar9.png<>uid://dc8wc7k7llei2::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar10.png
+Level_Bar_Animation.tscn::PackedScene::2455117527460621701::1725271762::0::1::::<><>::uid://dniapeb4q3m5::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Health_Bar_Back.png<>uid://bkp1b33nn42o0::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Level_Bar_Animation.tres
+>>>>>>> Stashed changes
 =======
 ::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/::1725271762
 Level_Bar_Animation.tres::SpriteFrames::3120856728507686585::1725271762::0::1::::<><>::uid://b607pop5mu2bj::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar1.png<>uid://dvbx2rp8kjhiq::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar2.png<>uid://clvp0s1grsqc1::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar3.png<>uid://ydv7enlbe2tx::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar4.png<>uid://dgi4ca3pghxtc::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar5.png<>uid://dykflsav7bkcx::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar6.png<>uid://dd772n1yv3hiw::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar7.png<>uid://c2ixmqu8bbfk2::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar8.png<>uid://7woei4r4edr7::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar9.png<>uid://dc8wc7k7llei2::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Frame/Level_Bar10.png
@@ -475,6 +531,7 @@ Level_Bar10.png::CompressedTexture2D::7369105247332331843::1725271762::172527177
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 ::res://Textures/Textures_by_Ilya/Prop/Gameplay/Rest/::1726313859
 ::res://Textures/Textures_by_Ilya/Prop/Map/::1726313859
 ::res://Textures/Textures_by_Ilya/Prop/Map/Lever/::1726313859
@@ -489,6 +546,9 @@ pump1.png::CompressedTexture2D::5233746251889719855::1726313859::1726313984::1::
 pump2.png::CompressedTexture2D::6827246736941945398::1726313859::1726313984::1::::<><>::
 ::res://Textures/Textures_by_Ilya/Prop/Map/Wooden_box/::1726313859
 Wooden_box.png::CompressedTexture2D::1284559085901097473::1726313859::1726313984::1::::<><>::
+=======
+::res://Textures/Textures_by_Ilya/Prop/Gameplay/Rest/::1725271762
+>>>>>>> Stashed changes
 =======
 ::res://Textures/Textures_by_Ilya/Prop/Gameplay/Rest/::1725271762
 >>>>>>> Stashed changes
