@@ -12,6 +12,10 @@ var level: int = 1
 @onready var health_bar = $bars/HealthBar/Health
 
 
+
+
+
+
 @export var speed : float = 600
 
 @export var joystick_left : VirtualJoystick
@@ -19,20 +23,81 @@ var level: int = 1
 
 var move_vector := Vector2.ZERO
 
+
+var is_attacking = false#атака	
+
+
 func _ready():
 	add_to_group("player")
 	set_physics_process(true)
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	exp_bar.value = 0
 
+=======
+	
+	# Подписываемся на сигнал анимации атаки
+	$CharAnims/Attack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
+>>>>>>> Stashed changes
+=======
+	
+	# Подписываемся на сигнал анимации атаки
+	$CharAnims/Attack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
+>>>>>>> Stashed changes
+=======
+	
+	# Подписываемся на сигнал анимации атаки
+	$CharAnims/Attack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
+>>>>>>> Stashed changes
+=======
+	
+	# Подписываемся на сигнал анимации атаки
+	$CharAnims/Attack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
+>>>>>>> Stashed changes
 
 
 func _on_attack_button_pressed():
-	if !$CharAnims/Attack.is_playing():  # Если анимация атаки не проигрывается
+	if not is_attacking:
+		is_attacking = true
+		start_attack()
+
+
+func start_attack():
+	if not $CharAnims/Attack.is_playing():  # Проверка, что анимация атаки не проигрывается
 		$CharAnims/Run.visible = false
 		$CharAnims/Idle.visible = false
 		$CharAnims/Attack.visible = true
 		$CharAnims/Attack.play("default")
 		$CharAnims/AttackBox.play("attack")
+
+func stop_attack():
+	is_attacking = false
+	# Проверка, что анимация атаки закончилась, если нет - остановка не требуется
+	if !$CharAnims/Attack.is_playing():
+		$CharAnims/Attack.visible = false
+		$CharAnims/Run.visible = true
+		$CharAnims/Run.play("default")
+
+
+func _on_attack_button_released():
+	stop_attack()
+	
+func _on_attack_animation_finished(animation_name: String):
+	if animation_name == "attack":  # Имя анимации атаки
+		stop_attack()  # Останавливаем атаку после завершения анимации
+
+
+
+
+#  Макса        func _on_attack_button_pressed():
+	#if !$CharAnims/Attack.is_playing():  # Если анимация атаки не проигрывается
+		#$CharAnims/Run.visible = false
+		#$CharAnims/Idle.visible = false
+		#$CharAnims/Attack.visible = true
+		#$CharAnims/Attack.play("default")
+		#$CharAnims/AttackBox.play("attack")
 	
 
 
@@ -80,8 +145,33 @@ func _process(delta: float) -> void:
 		if health <= 0.0:
 			health_gone.emit()
 			
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	$bars/HealthBar/HealthBarAnimation.play("default")
 	
+=======
+	if is_attacking:
+		start_attack()
+=======
+	if is_attacking:
+		start_attack()
+=======
+	if is_attacking:
+		start_attack()
+=======
+	if is_attacking:
+		start_attack()
+
+>>>>>>> Stashed changes
+
+>>>>>>> Stashed changes
+
+>>>>>>> Stashed changes
+
+
+>>>>>>> Stashed changes
 
 
 func add_experience(amount: int):
@@ -119,4 +209,6 @@ func _on_collect_area_area_entered(area):
 		var gem_exp = area.experience
 		add_experience(gem_exp)
 		area.queue_free()
+
+
 

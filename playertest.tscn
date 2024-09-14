@@ -91,8 +91,10 @@ offset_left = 1592.0
 offset_top = 750.0
 offset_right = 1846.0
 offset_bottom = 1004.0
+action_mode = 0
 icon = ExtResource("10_ljoh5")
 
 [connection signal="area_entered" from="GrabArea" to="." method="_on_grab_area_area_entered"]
 [connection signal="area_entered" from="CollectArea" to="." method="_on_collect_area_area_entered"]
-[connection signal="pressed" from="Joysticks/AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="button_down" from="Joysticks/AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="button_up" from="Joysticks/AttackButton" to="." method="_on_attack_button_released"]

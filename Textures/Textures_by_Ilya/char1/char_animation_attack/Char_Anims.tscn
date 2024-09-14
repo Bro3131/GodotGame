@@ -1,13 +1,83 @@
-[gd_scene load_steps=14 format=3 uid="uid://b47s10r2ejx88"]
+[gd_scene load_steps=25 format=3 uid="uid://b47s10r2ejx88"]
 
 [ext_resource type="SpriteFrames" uid="uid://pp1kd31rgj8f" path="res://Textures/Textures_by_Ilya/char1/character_animation_sprint/animation_char_sprint.tres" id="1_3rmbe"]
 [ext_resource type="SpriteFrames" uid="uid://dmld8lj1v7i5g" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Animation_attack.tres" id="1_qlkew"]
+[ext_resource type="Texture2D" uid="uid://d1ugnrf2ochl2" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final1.png" id="2_1foyd"]
 [ext_resource type="Script" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Area2D.gd" id="2_axdsr"]
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
 [ext_resource type="Texture2D" uid="uid://bjq1g2ev4dvlw" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk1.png" id="4_x042c"]
 [ext_resource type="Texture2D" uid="uid://die86yc40e67u" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk2.png" id="5_dng2l"]
 [ext_resource type="Texture2D" uid="uid://ceeqxomr52skp" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk3.png" id="6_2lfya"]
 [ext_resource type="Texture2D" uid="uid://cbxsp73ryl1ai" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk4.png" id="7_by866"]
 [ext_resource type="Texture2D" uid="uid://cpb31ludavg8k" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk5.png" id="8_0dsmw"]
+=======
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+[ext_resource type="Texture2D" uid="uid://313wthefqrnr" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final2.png" id="3_dd20c"]
+[ext_resource type="Texture2D" uid="uid://dbef7wk3ibl6b" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final3.png" id="4_fkir2"]
+[ext_resource type="Texture2D" uid="uid://djgjsobq3hn6g" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk1.png" id="4_x042c"]
+[ext_resource type="Texture2D" uid="uid://dwge3q8heb3w5" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk2.png" id="5_dng2l"]
+[ext_resource type="Texture2D" uid="uid://rgaibegfr03j" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final4.png" id="5_rhkr1"]
+[ext_resource type="Texture2D" uid="uid://ml8p71iej5y5" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk3.png" id="6_2lfya"]
+[ext_resource type="Texture2D" uid="uid://3fyk5ulyline" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final5.png" id="6_uuawf"]
+[ext_resource type="Texture2D" uid="uid://bt623kop5ip06" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final6.png" id="7_6d8lj"]
+[ext_resource type="Texture2D" uid="uid://k33swab0wywc" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk4.png" id="7_by866"]
+[ext_resource type="Texture2D" uid="uid://udhx0chvqcck" path="res://Textures/Textures_by_Ilya/char1/char_animation_afk/frame/character_animation_afk5.png" id="8_0dsmw"]
+[ext_resource type="Texture2D" uid="uid://bimbrdxbfqec4" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final7.png" id="8_xmm4v"]
+[ext_resource type="Texture2D" uid="uid://bc87foyo0wv0c" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final8.png" id="9_mhpc3"]
+[ext_resource type="Texture2D" uid="uid://b7ltgp5yck52e" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final9.png" id="10_0shtx"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_g1s7x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_1foyd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_dd20c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_fkir2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_rhkr1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_uuawf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_6d8lj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_xmm4v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_mhpc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_0shtx")
+}],
+"loop": false,
+"name": &"default",
+"speed": 9.0
+}]
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6ctj"]
 radius = 13.5716
@@ -164,8 +234,84 @@ tracks/5/keys = {
 "values": [-1.72262, -1.72262, -1.72262]
 }
 
+[sub_resource type="Animation" id="Animation_vng28"]
+resource_name = "FinalAttack"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Area2D/CollisionShape2D:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [Vector2(-62.5, -31), Vector2(44, -37.5), Vector2(55.5, -34.5), Vector2(91, -71.5), Vector2(-28.5, -98.5), Vector2(-28.5, -98.5), Vector2(-28.5, -98.5), Vector2(78, -15)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Area2D/CollisionShape2D:shape")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"update": 1,
+"values": [SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj")]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Area2D/CollisionShape2D:rotation")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [-1.72262, -1.72262, -1.72262, -1.72262, -1.04196, -1.04196]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Area2D/CollisionShape2D:shape:radius")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [15.2461, 47.5586, 21.9333, 82.3846, 18.5007, 18.5007]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Area2D/CollisionShape2D:shape:height")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"update": 0,
+"values": [109.329, 308.821, 114.341, 268.128, 116.824, 116.824]
+}
+tracks/5/type = "value"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"times": PackedFloat32Array(0, 0.8),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_03oju"]
 _data = {
+"FinalAttack": SubResource("Animation_vng28"),
 "RESET": SubResource("Animation_j75s3"),
 "attack": SubResource("Animation_wermt")
 }
@@ -200,7 +346,17 @@ visible = false
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_qlkew")
+frame = 3
+frame_progress = 1.0
 offset = Vector2(42.5, -71.5)
+
+[node name="FinalAttack" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(86, -143)
+scale = Vector2(2, 2)
+sprite_frames = SubResource("SpriteFrames_g1s7x")
+frame = 8
+frame_progress = 1.0
 
 [node name="AttackBox" type="AnimationPlayer" parent="."]
 libraries = {
@@ -229,6 +385,7 @@ frame_progress = 1.0
 offset = Vector2(-40, -38.5)
 
 [node name="Idle" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_6h3fe")

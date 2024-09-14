@@ -1,3 +1,4 @@
+AnimatedSprite2D
 Label
 TextureProgressBar
 Button
@@ -10,5 +11,4 @@ Container
 HBoxContainer
 SubViewport
 Timer
-AnimatedSprite2D
 Node2D
