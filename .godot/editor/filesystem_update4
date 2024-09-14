@@ -1,8 +1,11 @@
+<<<<<<< HEAD
 res://testgame.gd
 res://playertest.tscn
 res://Area2D.gd
 res://ui.tscn
 res://ui.gd
+=======
+>>>>>>> 94ef973aa284236666bcb2ece528487e0e3e21ec
 res://testgame.tscn
 res://testgun.tscn
 res://mobtest.tscn
@@ -11,4 +14,7 @@ res://Textures/Textures_by_Ilya/char1/char_animation_attack/Char_Anims.tscn
 res://characters/slime/slime.tscn
 res://characters/happy_boo/happy_boo.tscn
 res://animation_char_sprint.tscn
+<<<<<<< HEAD
 res://playertest.gd
+=======
+>>>>>>> 94ef973aa284236666bcb2ece528487e0e3e21ec
