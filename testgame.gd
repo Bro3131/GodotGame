@@ -12,7 +12,7 @@ func _ready():
 	end_game_screen.visible = false
 	main_menu.visible = false
 	settings_menu.visible = false
-	pause_menu.visible = false
+#	pause_menu.visible = false
 	get_tree().paused = false
 	elapsed_time = 0.0
 

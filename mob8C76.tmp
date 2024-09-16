@@ -1,0 +1,104 @@
+[gd_scene load_steps=11 format=3 uid="uid://5gbwxyaj5adf"]
+
+[ext_resource type="PackedScene" uid="uid://ogik4s70pgwl" path="res://characters/slime/slime.tscn" id="1_0koky"]
+[ext_resource type="Script" path="res://mobtest.gd" id="1_u1v7p"]
+[ext_resource type="Script" path="res://Sword/MyHurtBox.gd" id="3_pmr0d"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_3swhq"]
+radius = 62.9415
+height = 125.883
+
+[sub_resource type="Animation" id="Animation_gm1jn"]
+resource_name = "slime_take_damage"
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_bsxwk"]
+_data = {
+"slime_take_damage": SubResource("Animation_gm1jn")
+}
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_maq7q"]
+radius = 67.0075
+
+[sub_resource type="Animation" id="Animation_wuuys"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KatanaTest/MyHitBox/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 1,
+"values": [false]
+}
+
+[sub_resource type="Animation" id="Animation_xta15"]
+resource_name = "katana_animation"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("KatanaTest/MyHitBox/CollisionShape2D:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3),
+"transitions": PackedFloat32Array(1, 1),
+"update": 1,
+"values": [false, true]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("KatanaTest:rotation")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 0.15, 0.2, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1, 1),
+"update": 0,
+"values": [-0.00319186, 0.565816, 0.920544, 0.104184]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_tdip7"]
+_data = {
+"RESET": SubResource("Animation_wuuys"),
+"hit": SubResource("Animation_xta15")
+}
+
+[node name="mobtest" type="CharacterBody2D" groups=["enemy"]]
+collision_layer = 3
+collision_mask = 3
+platform_floor_layers = 0
+script = ExtResource("1_u1v7p")
+
+[node name="Slime" parent="." instance=ExtResource("1_0koky")]
+unique_name_in_owner = true
+
+[node name="MyHurtBox" type="Area2D" parent="Slime" groups=["enemy"]]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("3_pmr0d")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Slime/MyHurtBox"]
+position = Vector2(0, -27)
+rotation = 2.1114
+shape = SubResource("CapsuleShape2D_3swhq")
+
+[node name="slime_take_damage" type="AnimationPlayer" parent="Slime"]
+libraries = {
+"": SubResource("AnimationLibrary_bsxwk")
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
+position = Vector2(0, -29)
+shape = SubResource("CircleShape2D_maq7q")
+
+[node name="Huy" type="AnimationPlayer" parent="."]
+root_node = NodePath("../../..")
+libraries = {
+"": SubResource("AnimationLibrary_tdip7")
+}
+speed_scale = 1.042
