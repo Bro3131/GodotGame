@@ -62,7 +62,7 @@ visible = false
 position = Vector2(1568, 79)
 
 [node name="HealthBar" parent="bars" instance=ExtResource("4_eflj3")]
-position = Vector2(360, 80)
+position = Vector2(342, 92.5)
 
 [node name="GrabArea" type="Area2D" parent="."]
 visible = false

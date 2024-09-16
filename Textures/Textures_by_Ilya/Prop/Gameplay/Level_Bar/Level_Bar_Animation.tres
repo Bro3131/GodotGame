@@ -14,7 +14,7 @@
 [resource]
 animations = [{
 "frames": [{
-"duration": 100.0,
+"duration": 1.0,
 "texture": ExtResource("1_yccgu")
 }, {
 "duration": 1.0,

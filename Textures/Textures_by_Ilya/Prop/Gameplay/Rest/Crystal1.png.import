@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://cth2u28oc5tan"
-path="res://.godot/imported/Dog_bot_walking_animation8.png-4081f90fb06cf1cbe3b7318ac433a157.ctex"
+uid="uid://cqkcy347rvu7t"
+path="res://.godot/imported/Crystal1.png-518f5c728f6bc0b3ae7c2e82d94a545c.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Textures_by_Ilya/Enemy/Dog_bot/Dog_bot_walking_animation/Frame/Dog_bot_walking_animation8.png"
-dest_files=["res://.godot/imported/Dog_bot_walking_animation8.png-4081f90fb06cf1cbe3b7318ac433a157.ctex"]
+source_file="res://Textures/Textures_by_Ilya/Prop/Gameplay/Rest/Crystal1.png"
+dest_files=["res://.godot/imported/Crystal1.png-518f5c728f6bc0b3ae7c2e82d94a545c.ctex"]
 
 [params]
 

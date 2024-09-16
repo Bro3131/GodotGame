@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://gh76l5rpcnkj"
-path="res://.godot/imported/Dog_bot_walking_animation6.png-792e04e3209040b69e0383aa8885bcea.ctex"
+uid="uid://ylimuj7b084t"
+path="res://.godot/imported/Dog_bot_walking_animation8.png-54de546061af1c443cc5903d3df2205e.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Textures_by_Ilya/Enemy/Dog_bot/Dog_bot_walking_animation/Frame/Dog_bot_walking_animation6.png"
-dest_files=["res://.godot/imported/Dog_bot_walking_animation6.png-792e04e3209040b69e0383aa8885bcea.ctex"]
+source_file="res://Textures/Textures_by_Ilya/Enemy/Dog_bot/Dog_bot_walking_attack_animation/Frame/Dog_bot_walking_animation8.png"
+dest_files=["res://.godot/imported/Dog_bot_walking_animation8.png-54de546061af1c443cc5903d3df2205e.ctex"]
 
 [params]
 

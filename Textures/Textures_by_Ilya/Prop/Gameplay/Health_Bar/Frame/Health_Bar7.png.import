@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://fpdmusa4nrjd"
-path="res://.godot/imported/Dog_bot_walking_animation4.png-8b9b7ac65a89a34c6d26bc85b8d8881c.ctex"
+uid="uid://yy2i38y25n0v"
+path="res://.godot/imported/Health_Bar7.png-253a45fed8297cd4090576bb1079c3e4.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Textures_by_Ilya/Enemy/Dog_bot/Dog_bot_walking_animation/Frame/Dog_bot_walking_animation4.png"
-dest_files=["res://.godot/imported/Dog_bot_walking_animation4.png-8b9b7ac65a89a34c6d26bc85b8d8881c.ctex"]
+source_file="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Health_Bar7.png"
+dest_files=["res://.godot/imported/Health_Bar7.png-253a45fed8297cd4090576bb1079c3e4.ctex"]
 
 [params]
 

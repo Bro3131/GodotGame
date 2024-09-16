@@ -1,40 +1,40 @@
 [gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://cj4sps2fvwma8"]
 
-[ext_resource type="Texture2D" uid="uid://dq3h5jfvhu23w" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Спрайт-hp1.png" id="1_i6yex"]
-[ext_resource type="Texture2D" uid="uid://dwmtcsg17m47u" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Спрайт-hp2.png" id="2_p1m1c"]
-[ext_resource type="Texture2D" uid="uid://dxcaumv6t5efc" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Спрайт-hp3.png" id="3_wc6te"]
-[ext_resource type="Texture2D" uid="uid://i7obkqpph6n4" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Спрайт-hp4.png" id="4_7mgbo"]
-[ext_resource type="Texture2D" uid="uid://cgsnh0h1wnd7p" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Спрайт-hp5.png" id="5_e116c"]
-[ext_resource type="Texture2D" uid="uid://b7q8dn2qev1ur" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Спрайт-hp6.png" id="6_hlqn5"]
-[ext_resource type="Texture2D" uid="uid://bw6b4ra8tvxs2" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Спрайт-hp7.png" id="7_l4j1d"]
-[ext_resource type="Texture2D" uid="uid://bkg0ev6dtubti" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Спрайт-hp8.png" id="8_wkw8o"]
+[ext_resource type="Texture2D" uid="uid://bo5aygg1mgeyn" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Health_Bar1.png" id="1_k848k"]
+[ext_resource type="Texture2D" uid="uid://d35qrmr2p3ek0" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Health_Bar2.png" id="2_6ofj6"]
+[ext_resource type="Texture2D" uid="uid://coyddgwyxx0ku" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Health_Bar3.png" id="3_tp7r7"]
+[ext_resource type="Texture2D" uid="uid://chrun6pdp8nc0" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Health_Bar4.png" id="4_i4deb"]
+[ext_resource type="Texture2D" uid="uid://bds8yb38wkrgc" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Health_Bar5.png" id="5_dikc3"]
+[ext_resource type="Texture2D" uid="uid://btnrefd0j0vef" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Health_Bar6.png" id="6_yws6n"]
+[ext_resource type="Texture2D" uid="uid://yy2i38y25n0v" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Health_Bar7.png" id="7_un07j"]
+[ext_resource type="Texture2D" uid="uid://colvrx0wh8y12" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Frame/Health_Bar8.png" id="8_ul6vn"]
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_i6yex")
+"texture": ExtResource("1_k848k")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_p1m1c")
+"texture": ExtResource("2_6ofj6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_wc6te")
+"texture": ExtResource("3_tp7r7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_7mgbo")
+"texture": ExtResource("4_i4deb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_e116c")
+"texture": ExtResource("5_dikc3")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_hlqn5")
+"texture": ExtResource("6_yws6n")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_l4j1d")
+"texture": ExtResource("7_un07j")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_wkw8o")
+"texture": ExtResource("8_ul6vn")
 }],
 "loop": false,
 "name": &"default",
