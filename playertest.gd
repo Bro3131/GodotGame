@@ -144,7 +144,7 @@ func check_level_up():
 		experience = 0
 		experience_to_next_level = 100 * pow(level, 1.5)
 		set_expbarmax(experience, experience_to_next_level)
-		level_label.text = str("Level: ",level)
+		level_label.text = str(level)
 		# Дополнительно: добавьте у	лучшения для игрока при повышении уровня
 
 

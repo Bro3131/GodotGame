@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://ba8jorua5vvx2"]
+[gd_scene load_steps=4 format=3 uid="uid://ba8jorua5vvx2"]
 
 [ext_resource type="Texture2D" uid="uid://d1kj6nvfqumkp" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Level_line1.png" id="2_cby58"]
 [ext_resource type="SpriteFrames" uid="uid://bkp1b33nn42o0" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Level_Bar_Animation.tres" id="2_wtfda"]
+[ext_resource type="FontFile" uid="uid://ch2bfqsviedw5" path="res://Textures/Textures_by_Ilya/Font/Aos-Regular.ttf" id="3_6gqnw"]
 
 [node name="ExpBar" type="Node2D"]
 
@@ -21,18 +22,21 @@ sprite_frames = ExtResource("2_wtfda")
 frame_progress = 0.878471
 
 [node name="Level_label" type="Label" parent="."]
+texture_filter = 3
 anchors_preset = 6
 anchor_left = 1.0
 anchor_top = 0.5
 anchor_right = 1.0
 anchor_bottom = 0.5
-offset_left = 256.0
-offset_top = -41.0
-offset_right = 351.0
-offset_bottom = -18.0
+offset_left = -351.0
+offset_top = -43.0
+offset_right = -322.0
+offset_bottom = 3.0
 grow_horizontal = 0
 grow_vertical = 2
-theme_override_font_sizes/font_size = 16
-text = "Level: 1"
+theme_override_colors/font_color = Color(0.224526, 0.000158735, 0.286302, 1)
+theme_override_fonts/font = ExtResource("3_6gqnw")
+theme_override_font_sizes/font_size = 40
+text = "1"
 horizontal_alignment = 1
 vertical_alignment = 1

@@ -1,8 +1,9 @@
-[gd_scene load_steps=7 format=3 uid="uid://djlvbcsqvnxlw"]
+[gd_scene load_steps=8 format=3 uid="uid://djlvbcsqvnxlw"]
 
 [ext_resource type="Script" path="res://testgame.gd" id="1_aisom"]
 [ext_resource type="PackedScene" uid="uid://c5ldhpn6hxvjo" path="res://playertest.tscn" id="1_s0lxf"]
 [ext_resource type="PackedScene" uid="uid://bgyuj6ykvf7r5" path="res://characters/treetest.tscn" id="2_ks5bi"]
+[ext_resource type="FontFile" uid="uid://ch2bfqsviedw5" path="res://Textures/Textures_by_Ilya/Font/Aos-Regular.ttf" id="3_w5a3i"]
 [ext_resource type="PackedScene" uid="uid://dncs6766etnt3" path="res://ui.tscn" id="4_wuws7"]
 [ext_resource type="Texture2D" uid="uid://dlo4a2lq8w688" path="res://Textures/Gui/Pause-Button-PNG-Free-Download.png" id="5_hxf4k"]
 
@@ -41,11 +42,13 @@ icon = ExtResource("5_hxf4k")
 expand_icon = true
 
 [node name="time" type="Label" parent="CanvasLayer"]
-offset_left = 907.0
-offset_top = 15.0
-offset_right = 1001.0
-offset_bottom = 65.0
-theme_override_font_sizes/font_size = 36
+texture_filter = 1
+offset_left = 911.0
+offset_top = 5.0
+offset_right = 1005.0
+offset_bottom = 55.0
+theme_override_fonts/font = ExtResource("3_w5a3i")
+theme_override_font_sizes/font_size = 45
 text = "00:00"
 
 [node name="Player" parent="." instance=ExtResource("1_s0lxf")]
