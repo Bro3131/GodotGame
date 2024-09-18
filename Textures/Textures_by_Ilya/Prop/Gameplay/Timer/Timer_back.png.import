@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://b7qqlfx07rm5c"
-path="res://.godot/imported/button_quit2.png-5ce7d45b03a3285a9dec3f23c8cfbbf3.ctex"
+uid="uid://dqpdfg8kossfc"
+path="res://.godot/imported/Timer_back.png-66683c2184605b38fa6a08007255f319.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Textures_by_Ilya/Prop/Menu/button_quit2.png"
-dest_files=["res://.godot/imported/button_quit2.png-5ce7d45b03a3285a9dec3f23c8cfbbf3.ctex"]
+source_file="res://Textures/Textures_by_Ilya/Prop/Gameplay/Timer/Timer_back.png"
+dest_files=["res://.godot/imported/Timer_back.png-66683c2184605b38fa6a08007255f319.ctex"]
 
 [params]
 

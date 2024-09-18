@@ -6,10 +6,11 @@
 [node name="HealthBar" type="Node2D"]
 
 [node name="Health" type="TextureProgressBar" parent="."]
-offset_left = -400.0
-offset_top = -100.0
-offset_right = 350.0
-offset_bottom = 5.0
+offset_left = -408.0
+offset_top = -363.0
+offset_right = 342.0
+offset_bottom = -258.0
+scale = Vector2(-1, -1)
 pivot_offset = Vector2(400, 190)
 step = 0.01
 value = 100.0

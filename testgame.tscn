@@ -1,9 +1,10 @@
-[gd_scene load_steps=8 format=3 uid="uid://djlvbcsqvnxlw"]
+[gd_scene load_steps=9 format=3 uid="uid://djlvbcsqvnxlw"]
 
 [ext_resource type="Script" path="res://testgame.gd" id="1_aisom"]
 [ext_resource type="PackedScene" uid="uid://c5ldhpn6hxvjo" path="res://playertest.tscn" id="1_s0lxf"]
 [ext_resource type="PackedScene" uid="uid://bgyuj6ykvf7r5" path="res://characters/treetest.tscn" id="2_ks5bi"]
 [ext_resource type="FontFile" uid="uid://ch2bfqsviedw5" path="res://Textures/Textures_by_Ilya/Font/Aos-Regular.ttf" id="3_w5a3i"]
+[ext_resource type="Texture2D" uid="uid://dqpdfg8kossfc" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Timer/Timer_back.png" id="3_yo8o4"]
 [ext_resource type="PackedScene" uid="uid://dncs6766etnt3" path="res://ui.tscn" id="4_wuws7"]
 [ext_resource type="Texture2D" uid="uid://dlo4a2lq8w688" path="res://Textures/Gui/Pause-Button-PNG-Free-Download.png" id="5_hxf4k"]
 
@@ -33,22 +34,27 @@ metadata/_edit_use_anchors_ = true
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -1007.0
+offset_left = -1004.0
 offset_top = 65.0
-offset_right = -923.0
+offset_right = -920.0
 offset_bottom = 149.0
 grow_horizontal = 0
 icon = ExtResource("5_hxf4k")
 expand_icon = true
 
+[node name="TimerBack" type="Sprite2D" parent="CanvasLayer"]
+texture_filter = 1
+position = Vector2(961, 32)
+texture = ExtResource("3_yo8o4")
+
 [node name="time" type="Label" parent="CanvasLayer"]
 texture_filter = 1
-offset_left = 911.0
-offset_top = 5.0
-offset_right = 1005.0
-offset_bottom = 55.0
+offset_left = 912.0
+offset_top = 6.0
+offset_right = 1011.0
+offset_bottom = 57.0
 theme_override_fonts/font = ExtResource("3_w5a3i")
-theme_override_font_sizes/font_size = 45
+theme_override_font_sizes/font_size = 50
 text = "00:00"
 
 [node name="Player" parent="." instance=ExtResource("1_s0lxf")]

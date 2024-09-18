@@ -1,10 +1,7 @@
-res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Level_Bar.tscn
 res://testgame.tscn
-res://mobtest.tscn
 res://bullettest.tscn
 res://playertest.tscn
 res://Textures/Textures_by_Ilya/char1/char_animation_attack/Char_Anims.tscn
-res://characters/slime/slime.tscn
 res://ui.tscn
 res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Health_Bar.tscn
-res://playertest.gd
+res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Level_Bar.tscn
