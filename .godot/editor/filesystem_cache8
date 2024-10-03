@@ -1,5 +1,5 @@
 fc8a56933c4b1c8d796fdb8f7a9f9475
-::res://::1727158998
+::res://::1727271257
 animated_sprite_hpd.tscn::PackedScene::3166395262344083945::1726332738::0::1::::<><>::
 animation_char_sprint.tres::SpriteFrames::6464083261575448926::1726332738::0::1::::<><>::
 animation_char_sprint.tscn::PackedScene::8200426368109744817::1726332738::0::1::::<><>::uid://cydirh8l0o1gk::::res://animation_char_sprint.tres
@@ -9,7 +9,7 @@ bullettest.tscn::PackedScene::8288978598546132067::1726833883::0::1::::<><>::res
 collision.tscn::PackedScene::816191661598420816::1726499532::0::1::::<><>::uid://bnfrvrp11fd8f::::res://Sword/sword.tscn<>uid://5gbwxyaj5adf::::res://mobtest.tscn
 default_bus_layout.tres::AudioBusLayout::6564268947468103023::1726332738::0::1::::<><>::
 experience.tscn::PackedScene::946279739908152555::1726332738::0::1::::<><>::res://Area2D.gd<>uid://c7ei3o121pxf0::::res://Textures/testgem.png
-export_presets.cfg::TextFile::-1::1726332738::0::1::::<><>::
+export_presets.cfg::TextFile::-1::1727269840::0::1::::<><>::
 icon.png::CompressedTexture2D::621515402784007901::1726332738::1726332738::1::::<><>::
 icon.svg::CompressedTexture2D::736511090169923376::1726332738::1726409083::1::::<><>::
 Main_menu.gd::GDScript::-1::1726332737::0::1::::<>RefCounted<>::
@@ -21,7 +21,7 @@ playertest.gd::GDScript::-1::1726589278::0::1::::<>CharacterBody2D<>::
 playertest.tscn::PackedScene::6901410292708955484::1726833883::0::1::::<><>::res://playertest.gd<>uid://b47s10r2ejx88::::res://Textures/Textures_by_Ilya/char1/char_animation_attack/Char_Anims.tscn<>uid://bgs35bewh5xui::::res://testgun.tscn<>uid://52j4jdu4sqew::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Health_Bar.tscn<>uid://bnfrvrp11fd8f::::res://Sword/sword.tscn<>uid://ba8jorua5vvx2::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Level_Bar.tscn<>uid://mafpu56ta8ww::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Button_attack/Button_attack.png<>uid://dmr0fcamx7t56::::res://addons/virtual_joystick/virtual_joystick_scene.tscn
 README.md::TextFile::-1::1726332737::0::1::::<><>::
 testgame.gd::GDScript::-1::1726499532::0::1::::<>Node2D<>::
-testgame.tscn::PackedScene::7814946775367000352::1726833883::0::1::::<><>::res://testgame.gd<>uid://c5ldhpn6hxvjo::::res://playertest.tscn<>uid://bgyuj6ykvf7r5::::res://characters/treetest.tscn<>uid://ch2bfqsviedw5::::res://Textures/Textures_by_Ilya/Font/Aos-Regular.ttf<>uid://dqpdfg8kossfc::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Timer/Timer_back.png<>uid://dncs6766etnt3::::res://ui.tscn<>uid://dlo4a2lq8w688::::res://Textures/Gui/Pause-Button-PNG-Free-Download.png<>uid://djye1nodwq8ic::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Pause_button/Button_pause.png
+testgame.tscn::PackedScene::7814946775367000352::1727159041::0::1::::<><>::res://testgame.gd<>uid://c5ldhpn6hxvjo::::res://playertest.tscn<>uid://bgyuj6ykvf7r5::::res://characters/treetest.tscn<>uid://cw8q7o0dylrp5::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Pause_button/Button_pause_2.png<>uid://ch2bfqsviedw5::::res://Textures/Textures_by_Ilya/Font/Aos-Regular.ttf<>uid://dqpdfg8kossfc::::res://Textures/Textures_by_Ilya/Prop/Gameplay/Timer/Timer_back.png<>uid://dncs6766etnt3::::res://ui.tscn
 testgun.gd::GDScript::-1::1726332738::0::1::::<>Area2D<>::
 testgun.tscn::PackedScene::2846466254421687084::1726332738::0::1::::<><>::uid://cswb5do8rrj7q::::res://pistol/pistol.png<>res://testgun.gd
 ui.gd::GDScript::-1::1726332738::0::1::::<>CanvasLayer<>::
