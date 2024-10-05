@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bm4sclpwmtio7"
-path="res://.godot/imported/character_animated_attack2_final6.png-7dd0680febdb41eaf444a94ad83bb691.ctex"
+uid="uid://bf6sx4dvx3r66"
+path="res://.godot/imported/sword_animated_attack_final4.png-a551d1fc9eb3e5d03a1904510be97895.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final6.png"
-dest_files=["res://.godot/imported/character_animated_attack2_final6.png-7dd0680febdb41eaf444a94ad83bb691.ctex"]
+source_file="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final4.png"
+dest_files=["res://.godot/imported/sword_animated_attack_final4.png-a551d1fc9eb3e5d03a1904510be97895.ctex"]
 
 [params]
 

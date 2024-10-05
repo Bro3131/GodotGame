@@ -1,24 +1,24 @@
 [gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://dmld8lj1v7i5g"]
 
-[ext_resource type="Texture2D" uid="uid://d1ugnrf2ochl2" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final1.png" id="1_2lj2k"]
-[ext_resource type="Texture2D" uid="uid://313wthefqrnr" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final2.png" id="1_gtdue"]
-[ext_resource type="Texture2D" uid="uid://dbef7wk3ibl6b" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final3.png" id="2_slat6"]
-[ext_resource type="Texture2D" uid="uid://rgaibegfr03j" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final4.png" id="3_jxdgp"]
+[ext_resource type="Texture2D" uid="uid://dfyugu26cxq8f" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final1.png" id="1_rbrl2"]
+[ext_resource type="Texture2D" uid="uid://cvthwuqms0ahp" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final2.png" id="2_ufqp6"]
+[ext_resource type="Texture2D" uid="uid://bxf5jo1hc0331" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final3.png" id="3_pxtix"]
+[ext_resource type="Texture2D" uid="uid://caqfd1uscx5sj" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final4.png" id="4_dygye"]
 
 [resource]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("1_2lj2k")
+"texture": ExtResource("1_rbrl2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("1_gtdue")
+"texture": ExtResource("2_ufqp6")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_slat6")
+"texture": ExtResource("3_pxtix")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_jxdgp")
+"texture": ExtResource("4_dygye")
 }],
 "loop": false,
 "name": &"default",

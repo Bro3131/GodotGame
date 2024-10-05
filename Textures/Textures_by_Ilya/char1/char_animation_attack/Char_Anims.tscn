@@ -1,52 +1,76 @@
-[gd_scene load_steps=25 format=3 uid="uid://b47s10r2ejx88"]
+[gd_scene load_steps=30 format=3 uid="uid://b47s10r2ejx88"]
 
 [ext_resource type="SpriteFrames" uid="uid://pp1kd31rgj8f" path="res://Textures/Textures_by_Ilya/char1/character_animation_sprint/animation_char_sprint.tres" id="1_3rmbe"]
 [ext_resource type="SpriteFrames" uid="uid://dmld8lj1v7i5g" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Animation_attack.tres" id="1_qlkew"]
-[ext_resource type="Texture2D" uid="uid://d1ugnrf2ochl2" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final1.png" id="2_1foyd"]
+[ext_resource type="Texture2D" uid="uid://d110ec856wudl" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final1.png" id="2_65gsm"]
 [ext_resource type="Script" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Area2D.gd" id="2_axdsr"]
-[ext_resource type="Texture2D" uid="uid://313wthefqrnr" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final2.png" id="3_dd20c"]
-[ext_resource type="Texture2D" uid="uid://dbef7wk3ibl6b" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final3.png" id="4_fkir2"]
+[ext_resource type="Texture2D" uid="uid://dfyugu26cxq8f" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final1.png" id="2_qnhmt"]
+[ext_resource type="Texture2D" uid="uid://cvthwuqms0ahp" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final2.png" id="3_4rnsk"]
+[ext_resource type="Texture2D" uid="uid://dnfoxk0mwktwl" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final2.png" id="3_grxol"]
+[ext_resource type="Texture2D" uid="uid://q8uc22cr3d43" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final3.png" id="4_5xg44"]
 [ext_resource type="Texture2D" uid="uid://djgjsobq3hn6g" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk1.png" id="4_x042c"]
+[ext_resource type="Texture2D" uid="uid://bxf5jo1hc0331" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final3.png" id="4_xt0ct"]
+[ext_resource type="Texture2D" uid="uid://bf6sx4dvx3r66" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final4.png" id="5_11r3o"]
+[ext_resource type="Texture2D" uid="uid://caqfd1uscx5sj" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final4.png" id="5_64mml"]
 [ext_resource type="Texture2D" uid="uid://dwge3q8heb3w5" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk2.png" id="5_dng2l"]
-[ext_resource type="Texture2D" uid="uid://rgaibegfr03j" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final4.png" id="5_rhkr1"]
 [ext_resource type="Texture2D" uid="uid://ml8p71iej5y5" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk3.png" id="6_2lfya"]
-[ext_resource type="Texture2D" uid="uid://3fyk5ulyline" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final5.png" id="6_uuawf"]
-[ext_resource type="Texture2D" uid="uid://bt623kop5ip06" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final6.png" id="7_6d8lj"]
+[ext_resource type="Texture2D" uid="uid://grralnn3xbbw" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final5.png" id="6_cmlxb"]
 [ext_resource type="Texture2D" uid="uid://k33swab0wywc" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk4.png" id="7_by866"]
+[ext_resource type="Texture2D" uid="uid://bm4sclpwmtio7" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final6.png" id="7_pso6s"]
 [ext_resource type="Texture2D" uid="uid://udhx0chvqcck" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk5.png" id="8_0dsmw"]
-[ext_resource type="Texture2D" uid="uid://bimbrdxbfqec4" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final7.png" id="8_xmm4v"]
-[ext_resource type="Texture2D" uid="uid://bc87foyo0wv0c" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final8.png" id="9_mhpc3"]
-[ext_resource type="Texture2D" uid="uid://b7ltgp5yck52e" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack_final9.png" id="10_0shtx"]
+[ext_resource type="Texture2D" uid="uid://rk6h1x83erge" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final7.png" id="8_153i7"]
+[ext_resource type="Texture2D" uid="uid://brw1yvsxxx3qj" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final8.png" id="9_wd4q4"]
+[ext_resource type="Texture2D" uid="uid://xvjb31bt2ccg" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final9.png" id="10_8j0jp"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_myj13"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_65gsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_grxol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5xg44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_11r3o")
+}],
+"loop": true,
+"name": &"default",
+"speed": 9.0
+}]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g1s7x"]
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_1foyd")
+"texture": ExtResource("2_qnhmt")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_dd20c")
+"texture": ExtResource("3_4rnsk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_fkir2")
+"texture": ExtResource("4_xt0ct")
 }, {
 "duration": 1.0,
-"texture": ExtResource("5_rhkr1")
+"texture": ExtResource("5_64mml")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_uuawf")
+"texture": ExtResource("6_cmlxb")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_6d8lj")
+"texture": ExtResource("7_pso6s")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_xmm4v")
+"texture": ExtResource("8_153i7")
 }, {
 "duration": 1.0,
-"texture": ExtResource("9_mhpc3")
+"texture": ExtResource("9_wd4q4")
 }, {
 "duration": 1.0,
-"texture": ExtResource("10_0shtx")
+"texture": ExtResource("10_8j0jp")
 }],
 "loop": false,
 "name": &"default",
@@ -316,13 +340,16 @@ animations = [{
 [node name="CharAnims" type="Node2D"]
 
 [node name="Attack" type="AnimatedSprite2D" parent="."]
-visible = false
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_qlkew")
-frame = 3
-frame_progress = 1.0
 offset = Vector2(42.5, -71.5)
+
+[node name="Sword_attack" type="AnimatedSprite2D" parent="Attack"]
+position = Vector2(42.5, -71.5)
+sprite_frames = SubResource("SpriteFrames_myj13")
+frame = 1
+frame_progress = 0.172051
 
 [node name="FinalAttack" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -350,6 +377,7 @@ shape = SubResource("CapsuleShape2D_a6ctj")
 disabled = true
 
 [node name="Run" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_3rmbe")
@@ -358,7 +386,9 @@ frame_progress = 1.0
 offset = Vector2(-40, -38.5)
 
 [node name="Idle" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
+position = Vector2(-1, -1)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_6h3fe")
 frame_progress = 0.433566
