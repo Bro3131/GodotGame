@@ -1,9 +1,13 @@
-[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://dmld8lj1v7i5g"]
+[gd_resource type="SpriteFrames" load_steps=9 format=3 uid="uid://dmld8lj1v7i5g"]
 
 [ext_resource type="Texture2D" uid="uid://dfyugu26cxq8f" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final1.png" id="1_rbrl2"]
 [ext_resource type="Texture2D" uid="uid://cvthwuqms0ahp" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final2.png" id="2_ufqp6"]
 [ext_resource type="Texture2D" uid="uid://bxf5jo1hc0331" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final3.png" id="3_pxtix"]
 [ext_resource type="Texture2D" uid="uid://caqfd1uscx5sj" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final4.png" id="4_dygye"]
+[ext_resource type="Texture2D" uid="uid://d110ec856wudl" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final1.png" id="5_102y6"]
+[ext_resource type="Texture2D" uid="uid://dnfoxk0mwktwl" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final2.png" id="6_crs8w"]
+[ext_resource type="Texture2D" uid="uid://q8uc22cr3d43" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final3.png" id="7_iu0tn"]
+[ext_resource type="Texture2D" uid="uid://bf6sx4dvx3r66" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final4.png" id="8_y8ua5"]
 
 [resource]
 animations = [{
@@ -22,5 +26,22 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 9.0
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_102y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_crs8w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_iu0tn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_y8ua5")
+}],
+"loop": false,
+"name": &"new_animation",
+"speed": 5.0
 }]

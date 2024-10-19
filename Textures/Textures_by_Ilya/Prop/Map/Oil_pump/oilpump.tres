@@ -1,0 +1,26 @@
+[gd_resource type="SpriteFrames" load_steps=5 format=3 uid="uid://d0ed1c6utduyn"]
+
+[ext_resource type="Texture2D" uid="uid://cgtjbh0hnkirn" path="res://Textures/Textures_by_Ilya/Prop/Map/Oil_pump/Frame/pump1.png" id="1_dnea6"]
+[ext_resource type="Texture2D" uid="uid://c4jf0yi82nkcs" path="res://Textures/Textures_by_Ilya/Prop/Map/Oil_pump/Frame/pump2.png" id="2_28152"]
+[ext_resource type="Texture2D" uid="uid://cgd6t88hkhwm1" path="res://Textures/Textures_by_Ilya/Prop/Map/Oil_pump/Frame/pump3.png" id="3_g3dij"]
+[ext_resource type="Texture2D" uid="uid://iqm8islbr4yc" path="res://Textures/Textures_by_Ilya/Prop/Map/Oil_pump/Frame/pump4.png" id="4_5jse7"]
+
+[resource]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_dnea6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_28152")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_g3dij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5jse7")
+}],
+"loop": true,
+"name": &"default",
+"speed": 10.0
+}]

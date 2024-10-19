@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://chdp01hfc037q"]
+
+[ext_resource type="PhysicsMaterial" uid="uid://dyg3q1attn2am" path="res://Textures/Textures_by_Ilya/Prop/Map/Wooden_box/Woodenbox.tres" id="1_rwj6a"]
+[ext_resource type="Texture2D" uid="uid://skirasn5emuj" path="res://Textures/Textures_by_Ilya/Prop/Map/Wooden_box/Wooden_box.png" id="2_f522f"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpa6e"]
+size = Vector2(111, 110)
+
+[node name="Wooden_box" type="StaticBody2D"]
+physics_material_override = ExtResource("1_rwj6a")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture_filter = 1
+scale = Vector2(2, 2)
+texture = ExtResource("2_f522f")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(1.5, 5)
+shape = SubResource("RectangleShape2D_kpa6e")

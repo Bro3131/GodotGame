@@ -174,7 +174,7 @@ func check_level_up():
 		# Дополнительно: добавьте у	лучшения для игрока при повышении уровня
 		
 		# Увеличиваем скорость атаки при повышении уровня
-		#increase_attack_speed()
+		increase_attack_speed()
 		speed_up(300)  # Увеличение скорости на 50
 		increase_hp()
 		heal(max_health)
