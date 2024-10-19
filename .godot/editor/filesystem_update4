@@ -1,9 +1,10 @@
-res://Textures/Textures_by_Ilya/char1/char_animation_attack/Char_Anims.tscn
 res://testgame.tscn
+res://playertest.gd
 res://bullettest.tscn
 res://playertest.tscn
+res://Textures/Textures_by_Ilya/char1/char_animation_attack/Char_Anims.tscn
 res://ui.tscn
 res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Health_Bar.tscn
 res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Level_Bar.tscn
 res://addons/virtual_joystick/virtual_joystick_scene.tscn
-res://Textures/Textures_by_Ilya/char1/char_animation_attack/Animation_attack.tres
+res://mobtest.tscn

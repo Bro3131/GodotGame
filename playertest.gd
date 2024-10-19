@@ -3,6 +3,8 @@ extends CharacterBody2D
 signal health_gone
 
 var health = 100.0
+var max_health = 100.0  # Максимальное здоровье
+
 var experience: int = 0
 var level: int = 1
 @onready var exp_bar = $bars/ExpBar/ExpBaPr
@@ -13,7 +15,34 @@ var level: int = 1
 
 
 
+func speed_up(float): #Увеличение скорости передвижения
+	speed = speed + 300
 
+func increase_attack_speed():
+	attack_speed += 1.0  # Увеличиваем скорость атаки
+
+func increase_hp():
+	max_health += 5000  # Увеличение максимального здоровья
+	health = min(health, max_health)  # Ограничиваем текущее здоровье до максимального
+	health_bar.max_value = max_health  # Обновляем значение максимума на панели здоровья
+	health_bar.value = health  # Обновляем текущее значение на панели здоровья
+
+func set_health(value: float):
+	health = clamp(value, 0, max_health)  # Ограничиваем здоровье в пределах от 0 до max_health
+	health_bar.value = health  # Обновляем панель здоровья
+	if health <= 0:
+		health_gone.emit()
+		
+func heal(amount: float):
+	set_health(health + amount)  # Восстанавливаем здоровье
+
+# Функция для нанесения урона
+func take_damage_char(damage: float):
+	health = clamp(health - damage, 0, max_health)  # Уменьшаем здоровье, но не ниже 0
+	health_bar.value = health  # Обновляем панель здоровья
+	if health <= 0:
+		health_gone.emit()  # Сигнал, когда здоровье закончилось
+		
 
 
 @export var speed : float = 600
@@ -26,14 +55,21 @@ var move_vector := Vector2.ZERO
 
 var is_attacking = false#атака	
 
+var attack_speed: float = 1.0  # 1.0 — это стандартная скорость
+
+
+
 
 func _ready():
 	add_to_group("player")
 	set_physics_process(true)
+	health_bar.max_value = max_health  # Устанавливаем максимальное значение на панели здоровья
+	health_bar.value = health  # Устанавливаем текущее значение на панели здоровья
+
 
 	
 	# Подписываемся на сигнал анимации атаки
-	$CharAnims/Attack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
+	$CharAnims/FinalAttack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
 
 
 func _on_attack_button_pressed():
@@ -41,20 +77,23 @@ func _on_attack_button_pressed():
 		is_attacking = true
 		start_attack()
 
-
 func start_attack():
-	if not $CharAnims/Attack.is_playing():  # Проверка, что анимация атаки не проигрывается
+	if not $CharAnims/FinalAttack.is_playing():  # Проверка, что анимация атаки не проигрывается
 		$CharAnims/Run.visible = false
 		$CharAnims/Idle.visible = false
-		$CharAnims/Attack.visible = true
-		$CharAnims/Attack.play("default")
-		$CharAnims/AttackBox.play("attack")
+		$CharAnims/FinalAttack.visible = true 
+		$CharAnims/FinalAttack/Sword_FinalAttack.visible = true
+		$CharAnims/FinalAttack.play("default")
+		$CharAnims/FinalAttack/Sword_FinalAttack.play("default")
+		$CharAnims/FinalAttack.speed_scale = attack_speed  # Меняем скорость анимации
+		$CharAnims/FinalAttack/Sword_FinalAttack.speed_scale = attack_speed
+		$CharAnims/AttackBox.play("FinalAttack")
 
 func stop_attack():
 	is_attacking = false
 	# Проверка, что анимация атаки закончилась, если нет - остановка не требуется
-	if !$CharAnims/Attack.is_playing():
-		$CharAnims/Attack.visible = false
+	if !$CharAnims/FinalAttack.is_playing():
+		$CharAnims/FinalAttack.visible = false
 		$CharAnims/Run.visible = true
 		$CharAnims/Run.play("default")
 
@@ -63,20 +102,8 @@ func _on_attack_button_released():
 	stop_attack()
 	
 func _on_attack_animation_finished(animation_name: String):
-	if animation_name == "attack":  # Имя анимации атаки
+	if animation_name == "FinalAttack":  # Имя анимации атаки
 		stop_attack()  # Останавливаем атаку после завершения анимации
-
-
-
-
-#  Макса        func _on_attack_button_pressed():
-	#if !$CharAnims/Attack.is_playing():  # Если анимация атаки не проигрывается
-		#$CharAnims/Run.visible = false
-		#$CharAnims/Idle.visible = false
-		#$CharAnims/Attack.visible = true
-		#$CharAnims/Attack.play("default")
-		#$CharAnims/AttackBox.play("attack")
-	
 
 
 func _process(delta: float) -> void:
@@ -93,25 +120,26 @@ func _process(delta: float) -> void:
 	velocity.y = Input.get_action_strength("ui_down") - Input.get_action_strength("ui_up")  
 	
 	if velocity.x > 0:
-		$CharAnims/Attack.scale.x = 2
+		$CharAnims/FinalAttack.scale.x = 2
 		$CharAnims/Idle.scale.x = 2
 		$CharAnims/Run.scale.x = 2
 	elif velocity.x < 0:
-		$CharAnims/Attack.scale.x = -2
+		$CharAnims/FinalAttack.scale.x = -2
 		$CharAnims/Idle.scale.x = -2
 		$CharAnims/Run.scale.x = -2
 
 	if move_vector.length() > 0.0:
-		if !$CharAnims/Attack.is_playing():  # Добавляем проверку, что анимация атаки не проигрывается
-			$CharAnims/Attack.visible = false
+		if !$CharAnims/FinalAttack.is_playing():  # Добавляем проверку, что анимация атаки не проигрывается
+			$CharAnims/FinalAttack.visible = false
 			$CharAnims/Idle.visible = false
 			$CharAnims/Run.visible = true
 			$CharAnims/Run.play("default")
 	else:
-		if !$CharAnims/Attack.is_playing():  # Добавляем проверку, что анимация атаки не проигрывается
-			$CharAnims/Attack.visible = false
+		if !$CharAnims/FinalAttack.is_playing():  # Добавляем проверку, что анимация атаки не проигрывается
+			$CharAnims/FinalAttack.visible = false
 			$CharAnims/Run.visible = false
 			$CharAnims/Idle.visible = true
+		
 		
 		
 	const DAMAGE_RATE = 1.0
@@ -129,8 +157,6 @@ func _process(delta: float) -> void:
 		start_attack()
 
 
-
-
 func add_experience(amount: int):
 	experience += amount
 	check_level_up()
@@ -146,6 +172,12 @@ func check_level_up():
 		set_expbarmax(experience, experience_to_next_level)
 		level_label.text = str(level)
 		# Дополнительно: добавьте у	лучшения для игрока при повышении уровня
+		
+		# Увеличиваем скорость атаки при повышении уровня
+		#increase_attack_speed()
+		speed_up(300)  # Увеличение скорости на 50
+		increase_hp()
+		heal(max_health)
 
 
 func set_expbar(exp):
