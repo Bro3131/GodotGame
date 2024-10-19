@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://djlvbcsqvnxlw"]
+[gd_scene load_steps=10 format=3 uid="uid://djlvbcsqvnxlw"]
 
 [ext_resource type="Script" path="res://testgame.gd" id="1_aisom"]
 [ext_resource type="PackedScene" uid="uid://c5ldhpn6hxvjo" path="res://playertest.tscn" id="1_s0lxf"]
@@ -7,6 +7,7 @@
 [ext_resource type="FontFile" uid="uid://ch2bfqsviedw5" path="res://Textures/Textures_by_Ilya/Font/Aos-Regular.ttf" id="3_w5a3i"]
 [ext_resource type="Texture2D" uid="uid://dqpdfg8kossfc" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Timer/Timer_back.png" id="3_yo8o4"]
 [ext_resource type="PackedScene" uid="uid://dncs6766etnt3" path="res://ui.tscn" id="4_wuws7"]
+[ext_resource type="PackedScene" uid="uid://chdp01hfc037q" path="res://Textures/Textures_by_Ilya/Prop/Map/Wooden_box/woodenbox.tscn" id="8_ly2ss"]
 
 [sub_resource type="Curve2D" id="Curve2D_0t50q"]
 _data = {
@@ -27,24 +28,25 @@ anchor_right = 1.08339
 anchor_bottom = 1.03644
 offset_right = -158.1
 offset_bottom = -30.3528
-color = Color(0.297433, 0.475763, 0.214713, 1)
+color = Color(0.556295, 0.380514, 0.0939515, 1)
 metadata/_edit_use_anchors_ = true
 
 [node name="PauseButton" type="Button" parent="CanvasLayer"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -1004.0
-offset_top = 65.0
-offset_right = -920.0
-offset_bottom = 149.0
+offset_left = -1002.0
+offset_top = 43.0
+offset_right = -918.0
+offset_bottom = 127.0
 grow_horizontal = 0
 icon = ExtResource("2_r4lo1")
+flat = true
 expand_icon = true
 
 [node name="TimerBack" type="Sprite2D" parent="CanvasLayer"]
 texture_filter = 1
-position = Vector2(961, 32)
+position = Vector2(-948, 295)
 texture = ExtResource("3_yo8o4")
 
 [node name="time" type="Label" parent="CanvasLayer"]
@@ -71,32 +73,38 @@ unique_name_in_owner = true
 position = Vector2(-230.29, -169.084)
 rotation = -0.011569
 
-[node name="treetest" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(252, 251)
+[node name="Oilpump6" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(1467, 220)
 
-[node name="treetest2" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(642, 572)
+[node name="Oilpump5" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(811, 884)
 
-[node name="treetest3" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(1334, 230)
+[node name="Oilpump4" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(545, 886)
 
-[node name="treetest4" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(1412, 280)
+[node name="Oilpump3" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(1091, 880)
 
-[node name="treetest5" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(1306, 313)
+[node name="Oilpump2" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(1378, 889)
 
-[node name="treetest6" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(819, 198)
+[node name="Oilpump1" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(1737, 215)
 
-[node name="treetest7" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(1133, 834)
+[node name="Oilpump" parent="." instance=ExtResource("2_ks5bi")]
+position = Vector2(1694, 906)
 
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
 
 [node name="UIs" parent="." instance=ExtResource("4_wuws7")]
+
+[node name="Wooden_box" parent="." instance=ExtResource("8_ly2ss")]
+position = Vector2(359, 556)
+
+[node name="Wooden_box2" parent="." instance=ExtResource("8_ly2ss")]
+position = Vector2(473, 554)
 
 [connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="health_gone" from="Player" to="." method="_on_player_health_gone"]

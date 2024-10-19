@@ -91,8 +91,10 @@ offset_left = 1613.0
 offset_top = 793.0
 offset_right = 1823.0
 offset_bottom = 1003.0
+theme_override_font_sizes/font_size = 1
 action_mode = 0
 icon = ExtResource("8_jjxqx")
+flat = true
 
 [connection signal="area_entered" from="GrabArea" to="." method="_on_grab_area_area_entered"]
 [connection signal="area_entered" from="CollectArea" to="." method="_on_collect_area_area_entered"]

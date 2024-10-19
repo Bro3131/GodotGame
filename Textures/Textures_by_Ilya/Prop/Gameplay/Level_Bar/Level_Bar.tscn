@@ -19,7 +19,9 @@ texture_progress = ExtResource("2_cby58")
 texture_filter = 1
 position = Vector2(-14, -35)
 sprite_frames = ExtResource("2_wtfda")
-frame_progress = 0.878471
+autoplay = "default"
+frame = 8
+frame_progress = 0.122556
 
 [node name="Level_label" type="Label" parent="."]
 texture_filter = 1

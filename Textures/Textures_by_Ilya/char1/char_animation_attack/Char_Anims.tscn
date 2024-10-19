@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://b47s10r2ejx88"]
+[gd_scene load_steps=28 format=3 uid="uid://b47s10r2ejx88"]
 
 [ext_resource type="SpriteFrames" uid="uid://pp1kd31rgj8f" path="res://Textures/Textures_by_Ilya/char1/character_animation_sprint/animation_char_sprint.tres" id="1_3rmbe"]
 [ext_resource type="SpriteFrames" uid="uid://dmld8lj1v7i5g" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Animation_attack.tres" id="1_qlkew"]
@@ -15,9 +15,7 @@
 [ext_resource type="Texture2D" uid="uid://dwge3q8heb3w5" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk2.png" id="5_dng2l"]
 [ext_resource type="Texture2D" uid="uid://ml8p71iej5y5" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk3.png" id="6_2lfya"]
 [ext_resource type="Texture2D" uid="uid://grralnn3xbbw" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final5.png" id="6_cmlxb"]
-[ext_resource type="Texture2D" uid="uid://k33swab0wywc" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk4.png" id="7_by866"]
 [ext_resource type="Texture2D" uid="uid://bm4sclpwmtio7" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final6.png" id="7_pso6s"]
-[ext_resource type="Texture2D" uid="uid://udhx0chvqcck" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk5.png" id="8_0dsmw"]
 [ext_resource type="Texture2D" uid="uid://rk6h1x83erge" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final7.png" id="8_153i7"]
 [ext_resource type="Texture2D" uid="uid://brw1yvsxxx3qj" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final8.png" id="9_wd4q4"]
 [ext_resource type="Texture2D" uid="uid://xvjb31bt2ccg" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final9.png" id="10_8j0jp"]
@@ -37,9 +35,9 @@ animations = [{
 "duration": 1.0,
 "texture": ExtResource("5_11r3o")
 }],
-"loop": true,
+"loop": false,
 "name": &"default",
-"speed": 9.0
+"speed": 5.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g1s7x"]
@@ -318,23 +316,23 @@ _data = {
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("4_x042c")
-}, {
-"duration": 1.0,
 "texture": ExtResource("5_dng2l")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_2lfya")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_by866")
+"texture": ExtResource("4_x042c")
+}, {
+"duration": 1.2,
+"texture": ExtResource("4_x042c")
 }, {
 "duration": 1.0,
-"texture": ExtResource("8_0dsmw")
+"texture": ExtResource("4_x042c")
 }],
 "loop": true,
 "name": &"default",
-"speed": 5.0
+"speed": 6.0
 }]
 
 [node name="CharAnims" type="Node2D"]
@@ -348,8 +346,8 @@ offset = Vector2(42.5, -71.5)
 [node name="Sword_attack" type="AnimatedSprite2D" parent="Attack"]
 position = Vector2(42.5, -71.5)
 sprite_frames = SubResource("SpriteFrames_myj13")
-frame = 1
-frame_progress = 0.172051
+frame = 3
+frame_progress = 1.0
 
 [node name="FinalAttack" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -391,7 +389,9 @@ texture_filter = 1
 position = Vector2(-1, -1)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_6h3fe")
-frame_progress = 0.433566
+autoplay = "default"
+frame = 1
+frame_progress = 0.0385646
 offset = Vector2(43, -71)
 
 [connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
