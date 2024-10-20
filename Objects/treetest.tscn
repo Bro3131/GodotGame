@@ -1,21 +1,27 @@
-[gd_scene load_steps=4 format=3 uid="uid://bgyuj6ykvf7r5"]
+[gd_scene load_steps=3 format=3 uid="uid://bgyuj6ykvf7r5"]
 
+<<<<<<< HEAD:Objects/treetest.tscn
 [ext_resource type="Texture2D" uid="uid://b7rhtttevhxtj" path="res://Enemy/slime/ground_shadow.png" id="1_5i635"]
 [ext_resource type="Texture2D" uid="uid://caqfk2xng5v5u" path="res://Objects/trees/pine_tree.png" id="2_rwgk5"]
+=======
+[ext_resource type="SpriteFrames" uid="uid://d0ed1c6utduyn" path="res://Textures/Textures_by_Ilya/Prop/Map/Oil_pump/oilpump.tres" id="1_mwwg5"]
+>>>>>>> 1a23d8d65ef3cf1a0e31c34a230ae74d4a7d2a7e:characters/treetest.tscn
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_khxg5"]
-radius = 22.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_t0oa6"]
+size = Vector2(208, 310)
 
-[node name="treetest" type="StaticBody2D"]
+[node name="Oilpump" type="StaticBody2D"]
 
-[node name="GroundShadow" type="Sprite2D" parent="."]
-modulate = Color(0.677371, 0.832321, 0.830237, 1)
-scale = Vector2(0.807692, 0.807692)
-texture = ExtResource("1_5i635")
-
-[node name="PineTree" type="Sprite2D" parent="."]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+modulate = Color(0.662452, 0.662452, 0.662452, 1)
+texture_filter = 1
 position = Vector2(-1, -65)
-texture = ExtResource("2_rwgk5")
+scale = Vector2(2, 2)
+sprite_frames = ExtResource("1_mwwg5")
+autoplay = "default"
+frame_progress = 0.114561
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-shape = SubResource("CircleShape2D_khxg5")
+position = Vector2(-37, -15)
+shape = SubResource("RectangleShape2D_t0oa6")
+one_way_collision_margin = 0.0

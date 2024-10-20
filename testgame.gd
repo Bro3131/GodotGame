@@ -1,7 +1,7 @@
 extends Node2D
 
 
-@onready var pause_menu: Control = $CanvasLayer/Pause_menu
+@onready var pause_menu: Control = $PauseMenu/Pause_menu
 @onready var time_label: Label = $stuff/time
 
 

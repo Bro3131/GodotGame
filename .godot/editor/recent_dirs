@@ -1,6 +1,19 @@
+<<<<<<< HEAD
 res://DB's
 res://UIs
 res://Uis
+=======
+<<<<<<< HEAD
+res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar
+res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar
+=======
+res://Textures/Textures_by_Ilya/Enemy/Dog_bot/Dog_bot_walking_attack_animation/Frame
+res://Textures/Textures_by_Ilya/Prop/Gameplay/Button_attack
+res://Textures/Textures_by_Ilya/Prop/Map/Wooden_box
+res://Textures/Textures_by_Ilya/Prop/Map/Oil_pump
+res://Textures/Textures_by_Ilya/Prop/Map/Oil_pump/Frame
+>>>>>>> f412c6c608c4a76554f5a3a4e5aa69e014fa0357
+>>>>>>> 1a23d8d65ef3cf1a0e31c34a230ae74d4a7d2a7e
 C:/Users/D/Desktop
 C:/Program Files/Java/jdk-23
 C:/Program Files/Java/jdk-23/bin
@@ -10,9 +23,6 @@ C:/vsyakoe
 res://Textures/Textures_by_Ilya/Prop/Gameplay/Pause_button
 res://Textures/Textures_by_Ilya/Prop/Menu
 res://Textures/Textures_by_Ilya/Prop/Gameplay/joystick
-res://Textures/Textures_by_Ilya/Prop/Gameplay/Button_attack
 res://Textures/Textures_by_Ilya/Prop/Menu/Button
-res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar
-res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar
 res://Textures/Textures_by_Ilya/char1/char_animation_attack
 res://

@@ -1,8 +1,9 @@
-res://testgame.tscn
 res://Player/playertest.tscn
+res://testgame.tscn
 res://UIs/main_menu.tscn
 res://UIs/main_settings.tscn
 res://UIs/end_game_screen.tscn
 res://UIs/level_up_menu.tscn
 res://UIs/pause_menu.tscn
 res://UIs/upgr_option.tscn
+res://testgame.gd
