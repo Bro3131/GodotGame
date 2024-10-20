@@ -1,0 +1,122 @@
+[gd_scene load_steps=5 format=3 uid="uid://dc1o011t3bx4h"]
+
+[ext_resource type="Script" path="res://UIs/level_up_menu.gd" id="1_lmy0n"]
+[ext_resource type="Texture2D" uid="uid://djxno8tsg588w" path="res://Textures/Textures_by_Ilya/Prop/Menu/Menu.png" id="2_ti5np"]
+[ext_resource type="FontFile" uid="uid://ch2bfqsviedw5" path="res://Textures/Textures_by_Ilya/Font/Aos-Regular.ttf" id="3_u0roa"]
+[ext_resource type="PackedScene" uid="uid://y80o2wo1hl5g" path="res://UIs/upgr_option.tscn" id="4_bnop2"]
+
+[node name="LevelUpMenu" type="CanvasLayer"]
+process_mode = 3
+script = ExtResource("1_lmy0n")
+
+[node name="Menu" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(960, 540)
+scale = Vector2(2, 2)
+texture = ExtResource("2_ti5np")
+
+[node name="Label" type="Label" parent="Menu"]
+texture_filter = 1
+anchors_preset = -1
+anchor_left = 0.333
+anchor_top = 0.028
+anchor_right = 0.667
+anchor_bottom = 0.131
+offset_left = -215.19
+offset_top = -223.516
+offset_right = -214.81
+offset_bottom = -223.557
+theme_override_fonts/font = ExtResource("3_u0roa")
+theme_override_font_sizes/font_size = 41
+text = "LVL UP!"
+horizontal_alignment = 1
+vertical_alignment = 1
+metadata/_edit_use_anchors_ = true
+
+[node name="options" type="Control" parent="Menu"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -215.0
+offset_top = -112.0
+offset_right = -215.0
+offset_bottom = -350.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+
+[node name="UpgrOption1" parent="Menu/options" instance=ExtResource("4_bnop2")]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 1)
+
+[node name="Button1" type="Button" parent="Menu/options/UpgrOption1"]
+layout_mode = 0
+offset_left = -127.0
+offset_top = -44.0
+offset_right = 128.0
+offset_bottom = 43.0
+
+[node name="UpgrOption2" parent="Menu/options" instance=ExtResource("4_bnop2")]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+scale = Vector2(1, 1)
+
+[node name="Button2" type="Button" parent="Menu/options/UpgrOption2"]
+layout_mode = 0
+offset_left = -127.0
+offset_top = -44.0
+offset_right = 128.0
+offset_bottom = 43.0
+
+[node name="UpgrOption3" parent="Menu/options" instance=ExtResource("4_bnop2")]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+grow_horizontal = 2
+scale = Vector2(1, 1)
+size_flags_horizontal = 4
+metadata/_edit_use_anchors_ = true
+
+[node name="Button2" type="Button" parent="Menu/options/UpgrOption3"]
+layout_mode = 0
+offset_left = -127.0
+offset_top = -44.0
+offset_right = 128.0
+offset_bottom = 43.0
+
+[node name="skip" type="Button" parent="Menu/options"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -117.0
+offset_top = 62.5
+offset_right = 117.0
+offset_bottom = 94.5
+grow_horizontal = 2
+grow_vertical = 0
+text = "Skip
+"
+
+[connection signal="pressed" from="Menu/options/UpgrOption1/Button1" to="." method="_on_button_1_pressed"]
+[connection signal="pressed" from="Menu/options/UpgrOption2/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Menu/options/UpgrOption3/Button2" to="." method="_on_button_2_pressed"]
+[connection signal="pressed" from="Menu/options/skip" to="." method="_on_button_pressed"]

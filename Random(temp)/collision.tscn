@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://lvms7m2wh5km"]
+
+[ext_resource type="PackedScene" uid="uid://bnfrvrp11fd8f" path="res://Weapons/Sword/sword.tscn" id="1_a7xg6"]
+[ext_resource type="PackedScene" uid="uid://5gbwxyaj5adf" path="res://Enemy/mobtest.tscn" id="2_de8xx"]
+
+[node name="Collision" type="Node2D"]
+
+[node name="Sword" parent="." instance=ExtResource("1_a7xg6")]
+
+[node name="mobtest" parent="." instance=ExtResource("2_de8xx")]

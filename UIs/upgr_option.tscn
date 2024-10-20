@@ -1,0 +1,47 @@
+[gd_scene load_steps=5 format=3 uid="uid://y80o2wo1hl5g"]
+
+[ext_resource type="Script" path="res://UIs/upgr_option.gd" id="1_kkj3v"]
+[ext_resource type="Texture2D" uid="uid://dulrawhcsk13n" path="res://Textures/Textures_by_Ilya/Prop/Menu/Button/Button1.png" id="1_rvo2v"]
+[ext_resource type="Texture2D" uid="uid://bwxm1qcqrnn80" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Menu_level_up/Button_icon/+maxhp.png" id="2_yxhny"]
+[ext_resource type="FontFile" uid="uid://ch2bfqsviedw5" path="res://Textures/Textures_by_Ilya/Font/Aos-Regular.ttf" id="3_bmrw3"]
+
+[node name="UpgrOption" type="Control"]
+layout_mode = 3
+anchors_preset = 0
+scale = Vector2(2, 2)
+script = ExtResource("1_kkj3v")
+
+[node name="Button" type="Sprite2D" parent="."]
+texture_filter = 1
+texture = ExtResource("1_rvo2v")
+
+[node name="Icon" type="Sprite2D" parent="."]
+texture_filter = 1
+position = Vector2(-88, 0)
+texture = ExtResource("2_yxhny")
+
+[node name="Name" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -52.0
+offset_top = -33.0
+offset_right = 103.0
+offset_bottom = -10.0
+theme_override_fonts/font = ExtResource("3_bmrw3")
+theme_override_font_sizes/font_size = 16
+text = "NAME TEMPL"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Description" type="Label" parent="."]
+texture_filter = 1
+layout_mode = 0
+offset_left = -50.0
+offset_top = -10.0
+offset_right = 105.0
+offset_bottom = 28.0
+theme_override_fonts/font = ExtResource("3_bmrw3")
+theme_override_font_sizes/font_size = 14
+text = "DESCITPTIPAOSJDOSAJDOJAOJCJASC"
+horizontal_alignment = 1
+autowrap_mode = 3
