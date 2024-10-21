@@ -1,4 +1,6 @@
 Button
+<<<<<<< HEAD
+=======
 Node2D
 CollisionShape2D
 Sprite2D
@@ -6,9 +8,21 @@ StaticBody2D
 AnimatedSprite2D
 Label
 TextureProgressBar
+>>>>>>> 1a23d8d65ef3cf1a0e31c34a230ae74d4a7d2a7e
 Control
+Container
+CanvasLayer
+Node
+Label
+Sprite2D
+AnimatedSprite2D
+TextureProgressBar
 VBoxContainer
 MarginContainer
 PanelContainer
 CenterContainer
+<<<<<<< HEAD
+HBoxContainer
+=======
 Container
+>>>>>>> 1a23d8d65ef3cf1a0e31c34a230ae74d4a7d2a7e

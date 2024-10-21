@@ -7,21 +7,20 @@
 [node name="ExpBar" type="Node2D"]
 
 [node name="ExpBaPr" type="TextureProgressBar" parent="."]
-offset_left = -414.0
-offset_top = -104.0
-offset_right = 386.0
-offset_bottom = 296.0
+offset_left = -324.0
+offset_top = -50.0
+offset_right = 337.0
+offset_bottom = -8.0
 step = 0.01
 value = 100.0
+nine_patch_stretch = true
 texture_progress = ExtResource("2_cby58")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
 position = Vector2(-14, -35)
 sprite_frames = ExtResource("2_wtfda")
-autoplay = "default"
-frame = 8
-frame_progress = 0.122556
+frame_progress = 0.878471
 
 [node name="Level_label" type="Label" parent="."]
 texture_filter = 1

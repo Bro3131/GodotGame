@@ -1,4 +1,4 @@
-[gd_scene load_steps=28 format=3 uid="uid://b47s10r2ejx88"]
+[gd_scene load_steps=36 format=3 uid="uid://b47s10r2ejx88"]
 
 [ext_resource type="SpriteFrames" uid="uid://pp1kd31rgj8f" path="res://Textures/Textures_by_Ilya/char1/character_animation_sprint/animation_char_sprint.tres" id="1_3rmbe"]
 [ext_resource type="SpriteFrames" uid="uid://dmld8lj1v7i5g" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Animation_attack.tres" id="1_qlkew"]
@@ -15,10 +15,17 @@
 [ext_resource type="Texture2D" uid="uid://dwge3q8heb3w5" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk2.png" id="5_dng2l"]
 [ext_resource type="Texture2D" uid="uid://ml8p71iej5y5" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk3.png" id="6_2lfya"]
 [ext_resource type="Texture2D" uid="uid://grralnn3xbbw" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final5.png" id="6_cmlxb"]
+[ext_resource type="Texture2D" uid="uid://k33swab0wywc" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk4.png" id="7_by866"]
 [ext_resource type="Texture2D" uid="uid://bm4sclpwmtio7" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final6.png" id="7_pso6s"]
+[ext_resource type="Texture2D" uid="uid://udhx0chvqcck" path="res://Textures/Textures_by_Ilya/char1/char_animation_Idle/frame/character_animation_afk5.png" id="8_0dsmw"]
 [ext_resource type="Texture2D" uid="uid://rk6h1x83erge" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final7.png" id="8_153i7"]
 [ext_resource type="Texture2D" uid="uid://brw1yvsxxx3qj" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final8.png" id="9_wd4q4"]
 [ext_resource type="Texture2D" uid="uid://xvjb31bt2ccg" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/character_animated_attack2_final9.png" id="10_8j0jp"]
+[ext_resource type="Texture2D" uid="uid://bv870xffd6p0o" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final5.png" id="15_c0h28"]
+[ext_resource type="Texture2D" uid="uid://n2iyn4oy0m3t" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final6.png" id="16_fywmy"]
+[ext_resource type="Texture2D" uid="uid://di71nugg5c2tf" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final7.png" id="17_5liaq"]
+[ext_resource type="Texture2D" uid="uid://ph8f2n0mwu4d" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final8.png" id="18_opwti"]
+[ext_resource type="Texture2D" uid="uid://sbamxqh4w75g" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/frame/sword_animated_attack_final9.png" id="19_klo08"]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_myj13"]
 animations = [{
@@ -37,7 +44,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"default",
-"speed": 5.0
+"speed": 9.0
 }]
 
 [sub_resource type="SpriteFrames" id="SpriteFrames_g1s7x"]
@@ -75,6 +82,41 @@ animations = [{
 "speed": 9.0
 }]
 
+[sub_resource type="SpriteFrames" id="SpriteFrames_jyiwh"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_65gsm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_grxol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_5xg44")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_11r3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_c0h28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_fywmy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_5liaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_opwti")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_klo08")
+}],
+"loop": false,
+"name": &"default",
+"speed": 9.0
+}]
+
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_a6ctj"]
 radius = 13.5716
 height = 107.049
@@ -84,67 +126,67 @@ resource_name = "FinalAttack"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/CollisionShape2D:position")
+tracks/0/path = NodePath("FinalAttack/Area2D/CollisionShape2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [Vector2(-62.5, -31), Vector2(44, -37.5), Vector2(55.5, -34.5), Vector2(91, -71.5), Vector2(-28.5, -98.5), Vector2(-28.5, -98.5), Vector2(-28.5, -98.5), Vector2(78, -15)]
+"values": [Vector2(-62.5, -31), Vector2(44, -37.5), Vector2(55.5, -34.5), Vector2(83.5, -68), Vector2(-22, -94.5), Vector2(-8.5, -100.5), Vector2(51.5, -92), Vector2(77.5, -84.5), Vector2(78, -15)]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionShape2D:shape")
+tracks/1/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 1,
-"values": [SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj")]
+"values": [SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj"), SubResource("CapsuleShape2D_a6ctj")]
 }
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D:rotation")
+tracks/2/path = NodePath("FinalAttack/Area2D/CollisionShape2D:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.6),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [-1.72262, -1.72262, -1.72262, -1.72262, -1.04196, -1.04196]
+"values": [-1.72262, -1.72262, -1.72262, -1.72262, -1.04196, -1.11273, -1.04196, -0.884754, -1.16917]
 }
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D/CollisionShape2D:shape:radius")
+tracks/3/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:radius")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [15.2461, 47.5586, 21.9333, 82.3846, 18.5007, 18.5007]
+"values": [15.2461, 61.3975, 63.8633, 19.0029, 22.0556, 17.4616, 73.129, 64.2398, 18.5007]
 }
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Area2D/CollisionShape2D:shape:height")
+tracks/4/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:height")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
-"times": PackedFloat32Array(0, 0.1, 0.2, 0.6, 0.7, 0.8),
-"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1),
+"times": PackedFloat32Array(0, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8),
+"transitions": PackedFloat32Array(1, 1, 1, 1, 1, 1, 1, 1, 1),
 "update": 0,
-"values": [109.329, 308.821, 114.341, 268.128, 116.824, 116.824]
+"values": [109.329, 308.821, 298.52, 127.878, 105.533, 123.024, 280.507, 226.916, 116.824]
 }
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/5/path = NodePath("FinalAttack/Area2D/CollisionShape2D:disabled")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -159,7 +201,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/CollisionShape2D:shape")
+tracks/0/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -171,7 +213,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionShape2D:shape:radius")
+tracks/1/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:radius")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -183,7 +225,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D:shape:height")
+tracks/2/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:height")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -195,7 +237,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/3/path = NodePath("FinalAttack/Area2D/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -207,7 +249,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Area2D/CollisionShape2D:position")
+tracks/4/path = NodePath("FinalAttack/Area2D/CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -219,7 +261,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D/CollisionShape2D:rotation")
+tracks/5/path = NodePath("FinalAttack/Area2D/CollisionShape2D:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -235,7 +277,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/CollisionShape2D:shape")
+tracks/0/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -247,7 +289,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionShape2D:shape:radius")
+tracks/1/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:radius")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -259,7 +301,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D:shape:height")
+tracks/2/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:height")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -271,7 +313,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/3/path = NodePath("FinalAttack/Area2D/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -283,7 +325,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Area2D/CollisionShape2D:position")
+tracks/4/path = NodePath("FinalAttack/Area2D/CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -295,7 +337,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D/CollisionShape2D:rotation")
+tracks/5/path = NodePath("FinalAttack/Area2D/CollisionShape2D:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -316,63 +358,71 @@ _data = {
 animations = [{
 "frames": [{
 "duration": 1.0,
+"texture": ExtResource("4_x042c")
+}, {
+"duration": 1.0,
 "texture": ExtResource("5_dng2l")
 }, {
 "duration": 1.0,
 "texture": ExtResource("6_2lfya")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_x042c")
-}, {
-"duration": 1.2,
-"texture": ExtResource("4_x042c")
+"texture": ExtResource("7_by866")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_x042c")
+"texture": ExtResource("8_0dsmw")
 }],
 "loop": true,
 "name": &"default",
-"speed": 6.0
+"speed": 5.0
 }]
 
 [node name="CharAnims" type="Node2D"]
 
 [node name="Attack" type="AnimatedSprite2D" parent="."]
+visible = false
 texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = ExtResource("1_qlkew")
+frame = 3
+frame_progress = 1.0
 offset = Vector2(42.5, -71.5)
 
 [node name="Sword_attack" type="AnimatedSprite2D" parent="Attack"]
+visible = false
 position = Vector2(42.5, -71.5)
 sprite_frames = SubResource("SpriteFrames_myj13")
 frame = 3
 frame_progress = 1.0
 
 [node name="FinalAttack" type="AnimatedSprite2D" parent="."]
-visible = false
-position = Vector2(86, -143)
+texture_filter = 1
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_g1s7x")
-frame = 8
-frame_progress = 1.0
+frame = 1
+offset = Vector2(43, -71.5)
+
+[node name="Sword_FinalAttack" type="AnimatedSprite2D" parent="FinalAttack"]
+texture_filter = 1
+position = Vector2(43, -71.5)
+sprite_frames = SubResource("SpriteFrames_jyiwh")
+frame = 1
+
+[node name="Area2D" type="Area2D" parent="FinalAttack"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_axdsr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinalAttack/Area2D"]
+position = Vector2(-62.5, -31)
+rotation = -1.72262
+shape = SubResource("CapsuleShape2D_a6ctj")
+disabled = true
 
 [node name="AttackBox" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_03oju")
 }
-
-[node name="Area2D" type="Area2D" parent="."]
-scale = Vector2(2, 2)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("2_axdsr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-62.5, -31)
-rotation = -1.72262
-shape = SubResource("CapsuleShape2D_a6ctj")
-disabled = true
 
 [node name="Run" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -390,8 +440,7 @@ position = Vector2(-1, -1)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_6h3fe")
 autoplay = "default"
-frame = 1
-frame_progress = 0.0385646
+frame_progress = 0.433566
 offset = Vector2(43, -71)
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="FinalAttack/Area2D" to="FinalAttack/Area2D" method="_on_body_entered"]

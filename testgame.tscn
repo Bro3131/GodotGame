@@ -1,13 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://djlvbcsqvnxlw"]
+[gd_scene load_steps=8 format=3 uid="uid://djlvbcsqvnxlw"]
 
 [ext_resource type="Script" path="res://testgame.gd" id="1_aisom"]
-[ext_resource type="PackedScene" uid="uid://c5ldhpn6hxvjo" path="res://playertest.tscn" id="1_s0lxf"]
-[ext_resource type="PackedScene" uid="uid://bgyuj6ykvf7r5" path="res://characters/treetest.tscn" id="2_ks5bi"]
+[ext_resource type="PackedScene" uid="uid://c5ldhpn6hxvjo" path="res://Player/playertest.tscn" id="1_s0lxf"]
 [ext_resource type="Texture2D" uid="uid://cw8q7o0dylrp5" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Pause_button/Button_pause_2.png" id="2_r4lo1"]
-[ext_resource type="FontFile" uid="uid://ch2bfqsviedw5" path="res://Textures/Textures_by_Ilya/Font/Aos-Regular.ttf" id="3_w5a3i"]
 [ext_resource type="Texture2D" uid="uid://dqpdfg8kossfc" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Timer/Timer_back.png" id="3_yo8o4"]
-[ext_resource type="PackedScene" uid="uid://dncs6766etnt3" path="res://ui.tscn" id="4_wuws7"]
-[ext_resource type="PackedScene" uid="uid://chdp01hfc037q" path="res://Textures/Textures_by_Ilya/Prop/Map/Wooden_box/woodenbox.tscn" id="8_ly2ss"]
+[ext_resource type="FontFile" uid="uid://dq5vighp2834" path="res://Textures/Textures_by_Ilya/Font/Zlusa _font.ttf" id="4_kdf23"]
+[ext_resource type="PackedScene" uid="uid://mysniagatv8e" path="res://UIs/pause_menu.tscn" id="7_mrhwb"]
 
 [sub_resource type="Curve2D" id="Curve2D_0t50q"]
 _data = {
@@ -19,43 +17,43 @@ point_count = 6
 y_sort_enabled = true
 script = ExtResource("1_aisom")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
+[node name="stuff" type="CanvasLayer" parent="."]
 layer = -33
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="stuff"]
 anchors_preset = -1
 anchor_right = 1.08339
 anchor_bottom = 1.03644
 offset_right = -158.1
 offset_bottom = -30.3528
-color = Color(0.556295, 0.380514, 0.0939515, 1)
+color = Color(0.297433, 0.475763, 0.214713, 1)
 metadata/_edit_use_anchors_ = true
 
-[node name="PauseButton" type="Button" parent="CanvasLayer"]
+[node name="PauseButton" type="Button" parent="stuff"]
 anchors_preset = 1
 anchor_left = 1.0
 anchor_right = 1.0
-offset_left = -1002.0
-offset_top = 43.0
-offset_right = -918.0
-offset_bottom = 127.0
+offset_left = -1004.0
+offset_top = 65.0
+offset_right = -920.0
+offset_bottom = 149.0
 grow_horizontal = 0
 icon = ExtResource("2_r4lo1")
 flat = true
 expand_icon = true
 
-[node name="TimerBack" type="Sprite2D" parent="CanvasLayer"]
+[node name="TimerBack" type="Sprite2D" parent="stuff"]
 texture_filter = 1
-position = Vector2(-948, 295)
+position = Vector2(966, -36)
 texture = ExtResource("3_yo8o4")
 
-[node name="time" type="Label" parent="CanvasLayer"]
+[node name="time" type="Label" parent="stuff"]
 texture_filter = 1
-offset_left = 912.0
-offset_top = 6.0
-offset_right = 1011.0
-offset_bottom = 57.0
-theme_override_fonts/font = ExtResource("3_w5a3i")
+offset_left = 924.0
+offset_top = 5.0
+offset_right = 1034.0
+offset_bottom = 56.0
+theme_override_fonts/font = ExtResource("4_kdf23")
 theme_override_font_sizes/font_size = 50
 text = "00:00"
 
@@ -73,39 +71,64 @@ unique_name_in_owner = true
 position = Vector2(-230.29, -169.084)
 rotation = -0.011569
 
-[node name="Oilpump6" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(1467, 220)
-
-[node name="Oilpump5" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(811, 884)
-
-[node name="Oilpump4" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(545, 886)
-
-[node name="Oilpump3" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(1091, 880)
-
-[node name="Oilpump2" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(1378, 889)
-
-[node name="Oilpump1" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(1737, 215)
-
-[node name="Oilpump" parent="." instance=ExtResource("2_ks5bi")]
-position = Vector2(1694, 906)
-
 [node name="Timer" type="Timer" parent="."]
 wait_time = 0.3
 autostart = true
 
-[node name="UIs" parent="." instance=ExtResource("4_wuws7")]
+[node name="PauseMenu" type="CanvasLayer" parent="."]
 
-[node name="Wooden_box" parent="." instance=ExtResource("8_ly2ss")]
-position = Vector2(359, 556)
+[node name="Pause_menu" parent="PauseMenu" instance=ExtResource("7_mrhwb")]
+visible = false
 
-[node name="Wooden_box2" parent="." instance=ExtResource("8_ly2ss")]
-position = Vector2(473, 554)
+[node name="CenterContainer2" type="CenterContainer" parent="PauseMenu/Pause_menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
-[connection signal="pressed" from="CanvasLayer/PauseButton" to="." method="_on_pause_button_pressed"]
+[node name="PanelContainer" type="PanelContainer" parent="PauseMenu/Pause_menu/CenterContainer2"]
+custom_minimum_size = Vector2(800, 650)
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PauseMenu/Pause_menu/CenterContainer2/PanelContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 8
+theme_override_constants/margin_top = 8
+theme_override_constants/margin_right = 8
+theme_override_constants/margin_bottom = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PauseMenu/Pause_menu/CenterContainer2/PanelContainer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/separation = 50
+
+[node name="Pause" type="Label" parent="PauseMenu/Pause_menu/CenterContainer2/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 71
+text = "Pause"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Continue" type="Button" parent="PauseMenu/Pause_menu/CenterContainer2/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 71
+text = "Continue "
+
+[node name="PauseSettings" type="Button" parent="PauseMenu/Pause_menu/CenterContainer2/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 71
+text = "Settings"
+
+[node name="Quit_to_mainMenu" type="Button" parent="PauseMenu/Pause_menu/CenterContainer2/PanelContainer/MarginContainer/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 71
+text = "Quit ot main menu
+"
+
+[connection signal="pressed" from="stuff/PauseButton" to="." method="_on_pause_button_pressed"]
 [connection signal="health_gone" from="Player" to="." method="_on_player_health_gone"]
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="PauseMenu/Pause_menu/CenterContainer2/PanelContainer/MarginContainer/VBoxContainer/Continue" to="." method="_on_continue_pressed"]
+[connection signal="pressed" from="PauseMenu/Pause_menu/CenterContainer2/PanelContainer/MarginContainer/VBoxContainer/PauseSettings" to="." method="_on_pause_settings_pressed"]
+[connection signal="pressed" from="PauseMenu/Pause_menu/CenterContainer2/PanelContainer/MarginContainer/VBoxContainer/Quit_to_mainMenu" to="." method="_on_quit_to_main_menu_pressed"]

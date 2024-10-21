@@ -1,0 +1,93 @@
+[gd_scene load_steps=12 format=3 uid="uid://c5ldhpn6hxvjo"]
+
+[ext_resource type="Script" path="res://Player/playertest.gd" id="1_w324g"]
+[ext_resource type="PackedScene" uid="uid://b47s10r2ejx88" path="res://Textures/Textures_by_Ilya/char1/char_animation_attack/Char_Anims.tscn" id="2_knh63"]
+[ext_resource type="PackedScene" uid="uid://52j4jdu4sqew" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Health_Bar/Health_Bar.tscn" id="4_eflj3"]
+[ext_resource type="PackedScene" uid="uid://ba8jorua5vvx2" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Level_Bar/Level_Bar.tscn" id="5_68nlj"]
+[ext_resource type="PackedScene" uid="uid://226vp1583gn7" path="res://DB's/upgrade_db.tscn" id="7_17o2b"]
+[ext_resource type="Texture2D" uid="uid://mafpu56ta8ww" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Button_attack/Button_attack.png" id="8_jjxqx"]
+[ext_resource type="PackedScene" uid="uid://dmr0fcamx7t56" path="res://addons/virtual_joystick/virtual_joystick_scene.tscn" id="8_m4a6n"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_0fqah"]
+radius = 58.0
+height = 222.034
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_xuhpp"]
+radius = 59.0
+height = 224.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_wria4"]
+radius = 200.0
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2psl8"]
+radius = 20.0
+
+[node name="Player" type="CharacterBody2D" node_paths=PackedStringArray("joystick_left") groups=["player"]]
+collision_mask = 9
+platform_floor_layers = 0
+script = ExtResource("1_w324g")
+joystick_left = NodePath("Joysticks/Virtual Joystick")
+
+[node name="CharAnims" parent="." instance=ExtResource("2_knh63")]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(3, -91)
+shape = SubResource("CapsuleShape2D_0fqah")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="HurtBox" type="Area2D" parent="."]
+unique_name_in_owner = true
+collision_layer = 0
+collision_mask = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HurtBox"]
+position = Vector2(3, -91)
+shape = SubResource("CapsuleShape2D_xuhpp")
+debug_color = Color(0.927448, 2.40654e-06, 0.506634, 0.42)
+
+[node name="bars" type="CanvasLayer" parent="."]
+
+[node name="ExpBar" parent="bars" instance=ExtResource("5_68nlj")]
+position = Vector2(1568, 79)
+
+[node name="HealthBar" parent="bars" instance=ExtResource("4_eflj3")]
+position = Vector2(354, 92.5)
+
+[node name="GrabArea" type="Area2D" parent="."]
+visible = false
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GrabArea"]
+shape = SubResource("CircleShape2D_wria4")
+
+[node name="CollectArea" type="Area2D" parent="."]
+visible = false
+collision_mask = 9
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="CollectArea"]
+shape = SubResource("CircleShape2D_2psl8")
+
+[node name="Joysticks" type="CanvasLayer" parent="."]
+
+[node name="Virtual Joystick" parent="Joysticks" instance=ExtResource("8_m4a6n")]
+offset_left = 66.0
+offset_top = -347.0
+offset_right = 323.0
+offset_bottom = -81.0
+
+[node name="AttackButton" type="Button" parent="Joysticks"]
+offset_left = 1613.0
+offset_top = 793.0
+offset_right = 1823.0
+offset_bottom = 1003.0
+action_mode = 0
+icon = ExtResource("8_jjxqx")
+flat = true
+
+[node name="UpgradeDB" parent="." instance=ExtResource("7_17o2b")]
+
+[connection signal="area_entered" from="GrabArea" to="." method="_on_grab_area_area_entered"]
+[connection signal="area_entered" from="CollectArea" to="." method="_on_collect_area_area_entered"]
+[connection signal="button_down" from="Joysticks/AttackButton" to="." method="_on_attack_button_pressed"]
+[connection signal="button_up" from="Joysticks/AttackButton" to="." method="_on_attack_button_released"]
