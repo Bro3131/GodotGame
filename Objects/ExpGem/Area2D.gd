@@ -4,9 +4,10 @@ extends Area2D
 var target = null
 var speed = -3
 # Установите количество опыта, который этот гем добавляет игроку
-@export var experience = 100
+@export var experience = 0
+
 @onready var collision_shape_2d = $CollisionShape2D
-@onready var sprite_2d = $Sprite2D
+@onready var sprite_2d = $Sprite2D 
 
 func _physics_process(delta):
 	if target != null:

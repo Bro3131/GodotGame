@@ -126,7 +126,7 @@ resource_name = "FinalAttack"
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/CollisionShape2D:position")
+tracks/0/path = NodePath("FinalAttack/Area2D/CollisionShape2D:position")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -138,7 +138,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionShape2D:shape")
+tracks/1/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -150,7 +150,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D:rotation")
+tracks/2/path = NodePath("FinalAttack/Area2D/CollisionShape2D:rotation")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -162,7 +162,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D/CollisionShape2D:shape:radius")
+tracks/3/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:radius")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -174,7 +174,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Area2D/CollisionShape2D:shape:height")
+tracks/4/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:height")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -186,11 +186,11 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/5/path = NodePath("FinalAttack/Area2D/CollisionShape2D:disabled")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
-"times": PackedFloat32Array(0.1, 0.8),
+"times": PackedFloat32Array(0, 0.8),
 "transitions": PackedFloat32Array(1, 1),
 "update": 1,
 "values": [false, true]
@@ -201,7 +201,7 @@ length = 0.001
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/CollisionShape2D:shape")
+tracks/0/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -213,7 +213,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionShape2D:shape:radius")
+tracks/1/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:radius")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -225,7 +225,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D:shape:height")
+tracks/2/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:height")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -237,7 +237,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/3/path = NodePath("FinalAttack/Area2D/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -249,7 +249,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Area2D/CollisionShape2D:position")
+tracks/4/path = NodePath("FinalAttack/Area2D/CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -261,7 +261,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D/CollisionShape2D:rotation")
+tracks/5/path = NodePath("FinalAttack/Area2D/CollisionShape2D:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -277,7 +277,7 @@ length = 0.4
 tracks/0/type = "value"
 tracks/0/imported = false
 tracks/0/enabled = true
-tracks/0/path = NodePath("Area2D/CollisionShape2D:shape")
+tracks/0/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape")
 tracks/0/interp = 1
 tracks/0/loop_wrap = true
 tracks/0/keys = {
@@ -289,7 +289,7 @@ tracks/0/keys = {
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
-tracks/1/path = NodePath("Area2D/CollisionShape2D:shape:radius")
+tracks/1/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:radius")
 tracks/1/interp = 1
 tracks/1/loop_wrap = true
 tracks/1/keys = {
@@ -301,7 +301,7 @@ tracks/1/keys = {
 tracks/2/type = "value"
 tracks/2/imported = false
 tracks/2/enabled = true
-tracks/2/path = NodePath("Area2D/CollisionShape2D:shape:height")
+tracks/2/path = NodePath("FinalAttack/Area2D/CollisionShape2D:shape:height")
 tracks/2/interp = 1
 tracks/2/loop_wrap = true
 tracks/2/keys = {
@@ -313,7 +313,7 @@ tracks/2/keys = {
 tracks/3/type = "value"
 tracks/3/imported = false
 tracks/3/enabled = true
-tracks/3/path = NodePath("Area2D/CollisionShape2D:disabled")
+tracks/3/path = NodePath("FinalAttack/Area2D/CollisionShape2D:disabled")
 tracks/3/interp = 1
 tracks/3/loop_wrap = true
 tracks/3/keys = {
@@ -325,7 +325,7 @@ tracks/3/keys = {
 tracks/4/type = "value"
 tracks/4/imported = false
 tracks/4/enabled = true
-tracks/4/path = NodePath("Area2D/CollisionShape2D:position")
+tracks/4/path = NodePath("FinalAttack/Area2D/CollisionShape2D:position")
 tracks/4/interp = 1
 tracks/4/loop_wrap = true
 tracks/4/keys = {
@@ -337,7 +337,7 @@ tracks/4/keys = {
 tracks/5/type = "value"
 tracks/5/imported = false
 tracks/5/enabled = true
-tracks/5/path = NodePath("Area2D/CollisionShape2D:rotation")
+tracks/5/path = NodePath("FinalAttack/Area2D/CollisionShape2D:rotation")
 tracks/5/interp = 1
 tracks/5/loop_wrap = true
 tracks/5/keys = {
@@ -397,32 +397,32 @@ frame_progress = 1.0
 
 [node name="FinalAttack" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(86, -143)
 scale = Vector2(2, 2)
 sprite_frames = SubResource("SpriteFrames_g1s7x")
+frame = 1
+offset = Vector2(43, -71.5)
 
 [node name="Sword_FinalAttack" type="AnimatedSprite2D" parent="FinalAttack"]
 texture_filter = 1
+position = Vector2(43, -71.5)
 sprite_frames = SubResource("SpriteFrames_jyiwh")
-frame = 8
-frame_progress = 1.0
+frame = 1
+
+[node name="Area2D" type="Area2D" parent="FinalAttack"]
+collision_layer = 0
+collision_mask = 2
+script = ExtResource("2_axdsr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="FinalAttack/Area2D"]
+position = Vector2(-62.5, -31)
+rotation = -1.72262
+shape = SubResource("CapsuleShape2D_a6ctj")
+disabled = true
 
 [node name="AttackBox" type="AnimationPlayer" parent="."]
 libraries = {
 "": SubResource("AnimationLibrary_03oju")
 }
-
-[node name="Area2D" type="Area2D" parent="."]
-scale = Vector2(2, 2)
-collision_layer = 0
-collision_mask = 2
-script = ExtResource("2_axdsr")
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-position = Vector2(-62.5, -31)
-rotation = -1.72262
-shape = SubResource("CapsuleShape2D_a6ctj")
-disabled = true
 
 [node name="Run" type="AnimatedSprite2D" parent="."]
 visible = false
@@ -443,4 +443,4 @@ autoplay = "default"
 frame_progress = 0.433566
 offset = Vector2(43, -71)
 
-[connection signal="body_entered" from="Area2D" to="Area2D" method="_on_body_entered"]
+[connection signal="body_entered" from="FinalAttack/Area2D" to="FinalAttack/Area2D" method="_on_body_entered"]

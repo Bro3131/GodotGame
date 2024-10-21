@@ -64,6 +64,7 @@ offset_left = -127.0
 offset_top = -44.0
 offset_right = 128.0
 offset_bottom = 43.0
+flat = true
 
 [node name="UpgrOption2" parent="Menu/options" instance=ExtResource("4_bnop2")]
 layout_mode = 1
@@ -82,6 +83,7 @@ offset_left = -127.0
 offset_top = -44.0
 offset_right = 128.0
 offset_bottom = 43.0
+flat = true
 
 [node name="UpgrOption3" parent="Menu/options" instance=ExtResource("4_bnop2")]
 layout_mode = 1
@@ -99,6 +101,7 @@ offset_left = -127.0
 offset_top = -44.0
 offset_right = 128.0
 offset_bottom = 43.0
+flat = true
 
 [node name="skip" type="Button" parent="Menu/options"]
 layout_mode = 1

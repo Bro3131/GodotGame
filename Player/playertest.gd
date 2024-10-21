@@ -17,31 +17,7 @@ var level: int = 1
 @onready var health_bar = $bars/HealthBar/Health
 
 
-
-func speed_up(float): #Увеличение скорости передвижения
-	speed = speed + 300
-
-func increase_attack_speed():
-	attack_speed += 1.0  # Увеличиваем скорость атаки
-
-func increase_hp():
-	max_health += 5000  # Увеличение максимального здоровья
-	health = min(health, max_health)  # Ограничиваем текущее здоровье до максимального
-	health_bar.max_value = max_health  # Обновляем значение максимума на панели здоровья
-	health_bar.value = health  # Обновляем текущее значение на панели здоровья
-
-func set_health(value: float):
-	health = clamp(value, 0, max_health)  # Ограничиваем здоровье в пределах от 0 до max_health
-	health_bar.value = health  # Обновляем панель здоровья
-	if health <= 0:
-		health_gone.emit()
-		
-func heal(amount: float):
-	set_health(health + amount)  # Восстанавливаем здоровье
-
-# Функция для нанесения урона
 func take_damage_char(damage: float):
-	health = clamp(health - damage, 0, max_health)  # Уменьшаем здоровье, но не ниже 0
 	health_bar.value = health  # Обновляем панель здоровья
 	if health <= 0:
 		health_gone.emit()  # Сигнал, когда здоровье закончилось
@@ -72,7 +48,7 @@ func _ready():
 
 	
 	# Подписываемся на сигнал анимации атаки
-	$CharAnims/FinalAttack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
+	#$CharAnims/FinalAttack.connect("animation_finished", Callable(self, "_on_attack_animation_finished"))
 
 
 func _on_attack_button_pressed():
