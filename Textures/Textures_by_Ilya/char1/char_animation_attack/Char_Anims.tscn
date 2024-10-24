@@ -404,9 +404,10 @@ offset = Vector2(43, -71.5)
 
 [node name="Sword_FinalAttack" type="AnimatedSprite2D" parent="FinalAttack"]
 texture_filter = 1
-position = Vector2(43, -71.5)
+position = Vector2(43, -70.5)
 sprite_frames = SubResource("SpriteFrames_jyiwh")
-frame = 1
+frame = 8
+frame_progress = 1.0
 
 [node name="Area2D" type="Area2D" parent="FinalAttack"]
 collision_layer = 0

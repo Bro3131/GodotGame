@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://y80o2wo1hl5g"]
+[gd_scene load_steps=6 format=3 uid="uid://y80o2wo1hl5g"]
 
 [ext_resource type="Script" path="res://UIs/upgr_option.gd" id="1_kkj3v"]
 [ext_resource type="Texture2D" uid="uid://dulrawhcsk13n" path="res://Textures/Textures_by_Ilya/Prop/Menu/Button/Button1.png" id="1_rvo2v"]
 [ext_resource type="Texture2D" uid="uid://bwxm1qcqrnn80" path="res://Textures/Textures_by_Ilya/Prop/Gameplay/Menu_level_up/Button_icon/+maxhp.png" id="2_yxhny"]
-[ext_resource type="FontFile" uid="uid://ch2bfqsviedw5" path="res://Textures/Textures_by_Ilya/Font/Aos-Regular.ttf" id="3_bmrw3"]
+[ext_resource type="FontFile" uid="uid://b7mdxvx0vpgoj" path="res://Textures/Textures_by_Ilya/Font/ComicoroRu_0.ttf" id="4_lbagh"]
+[ext_resource type="FontFile" uid="uid://dq5vighp2834" path="res://Textures/Textures_by_Ilya/Font/Zlusa _font.ttf" id="5_85y1m"]
 
 [node name="UpgrOption" type="Control"]
 layout_mode = 3
@@ -25,10 +26,10 @@ texture_filter = 1
 layout_mode = 0
 offset_left = -52.0
 offset_top = -33.0
-offset_right = 103.0
-offset_bottom = -10.0
-theme_override_fonts/font = ExtResource("3_bmrw3")
-theme_override_font_sizes/font_size = 16
+offset_right = 101.0
+offset_bottom = -9.0
+theme_override_fonts/font = ExtResource("4_lbagh")
+theme_override_font_sizes/font_size = 32
 text = "NAME TEMPL"
 horizontal_alignment = 1
 vertical_alignment = 1
@@ -36,12 +37,12 @@ vertical_alignment = 1
 [node name="Description" type="Label" parent="."]
 texture_filter = 1
 layout_mode = 0
-offset_left = -50.0
-offset_top = -10.0
-offset_right = 105.0
-offset_bottom = 28.0
-theme_override_fonts/font = ExtResource("3_bmrw3")
-theme_override_font_sizes/font_size = 14
-text = "DESCITPTIPAOSJDOSAJDOJAOJCJASC"
+offset_left = -38.0
+offset_top = -4.0
+offset_right = 87.0
+offset_bottom = 544.0
+theme_override_fonts/font = ExtResource("5_85y1m")
+theme_override_font_sizes/font_size = 16
+text = "Увеличивае анальное  здоровье"
 horizontal_alignment = 1
 autowrap_mode = 3
